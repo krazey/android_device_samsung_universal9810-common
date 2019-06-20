@@ -1,0 +1,428 @@
+--- telephony/java/android/telephony/SignalStrength.java.Original	2019-06-20 13:03:14.676098084 +0100
++++ telephony/java/android/telephony/SignalStrength.java	2019-06-20 13:03:46.180273763 +0100
+@@ -662,16 +662,215 @@
+      * @hide
+      */
+     public int getGsmDbm() {
+-        int dBm;
++        int dBm = INVALID;
+ 
+-        int gsmSignalStrength = getGsmSignalStrength();
++        /*int gsmSignalStrength = getGsmSignalStrength();
+         int asu = (gsmSignalStrength == 99 ? -1 : gsmSignalStrength);
+         if (asu != -1) {
+             dBm = -113 + (2 * asu);
+         } else {
+             dBm = -1;
+         }
+-        if (DBG) log("getGsmDbm=" + dBm);
++        if (DBG) log("getGsmDbm=" + dBm);*/
++
++	String GetRilStrength = android.os.SystemProperties.get("ril.signal.param");
++	String RilStrength[] = GetRilStrength.split(",");
++	int RilRssiLevel = Integer.parseInt(RilStrength[1]);
++
++	switch (RilRssiLevel) {
++		case 0:
++			dBm = -113;
++			break;
++		case 1:
++			dBm = -112;
++			break;
++		case 2:
++			dBm = -111;
++			break;
++		case 3:
++			dBm = -110;
++			break;
++		case 4:
++			dBm = -109;
++			break;
++		case 5:
++			dBm = -108;
++			break;
++		case 6:
++			dBm = -107;
++			break;
++		case 7:
++			dBm = -106;
++			break;
++		case 8:
++			dBm = -105;
++			break;
++		case 9:
++			dBm = -104;
++			break;
++		case 10:
++			dBm = -103;
++			break;
++		case 11:
++			dBm = -102;
++			break;
++		case 12:
++			dBm = -101;
++			break;
++		case 13:
++			dBm = -99;
++			break;
++		case 14:
++			dBm = -98;
++			break;
++		case 15:
++			dBm = -97;
++			break;
++		case 16:
++			dBm = -96;
++			break;
++		case 17:
++			dBm = -95;
++			break;
++		case 18:
++			dBm = -94;
++			break;
++		case 19:
++			dBm = -93;
++			break;
++		case 20:
++			dBm = -92;
++			break;
++		case 21:
++			dBm = -91;
++			break;
++		case 22:
++			dBm = -90;
++			break;
++		case 23:
++			dBm = -89;
++			break;
++		case 24:
++			dBm = -88;
++			break;
++		case 25:
++			dBm = -87;
++			break;
++		case 26:
++			dBm = -86;
++			break;
++		case 27:
++			dBm = -85;
++			break;
++		case 28:
++			dBm = -84;
++			break;
++		case 29:
++			dBm = -83;
++			break;
++		case 30:
++			dBm = -82;
++			break;
++		case 31:
++			dBm = -81;
++			break;
++		case 32:
++			dBm = -80;
++			break;
++		case 33:
++			dBm = -79;
++			break;
++		case 34:
++			dBm = -78;
++			break;
++		case 35:
++			dBm = -77;
++			break;
++		case 36:
++			dBm = -75;
++			break;
++		case 37:
++			dBm = -74;
++			break;
++		case 38:
++			dBm = -73;
++			break;
++		case 39:
++			dBm = -72;
++			break;
++		case 40:
++			dBm = -70;
++			break;
++		case 41:
++			dBm = -69;
++			break;
++		case 42:
++			dBm = -68;
++			break;
++		case 43:
++			dBm = -67;
++			break;
++		case 44:
++			dBm = -65;
++			break;
++		case 45:
++			dBm = -64;
++			break;
++		case 46:
++			dBm = -63;
++			break;
++		case 47:
++			dBm = -62;
++			break;
++		case 48:
++			dBm = -60;
++			break;
++		case 49:
++			dBm = -59;
++			break;
++		case 50:
++			dBm = -58;
++			break;
++		case 51:
++			dBm = -56;
++			break;
++		case 52:
++			dBm = -55;
++			break;
++		case 53:
++			dBm = -53;
++			break;
++		case 54:
++			dBm = -52;
++			break;
++		case 55:
++			dBm = -50;
++			break;
++		case 56:
++			dBm = -50;
++			break;
++		case 57:
++			dBm = -49;
++			break;
++		case 58:
++			dBm = -48;
++			break;
++		case 59:
++			dBm = -48;
++			break;
++		case 60:
++			dBm = -47;
++			break;
++		case 61:
++			dBm = -46;
++			break;
++		case 62:
++			dBm = -45;
++			break;
++		case 64:
++			dBm = -44;
++			break;
++	}
+         return dBm;
+     }
+ 
+@@ -836,6 +1035,206 @@
+      * @hide
+      */
+     public int getLteDbm() {
++	String GetRilStrength = android.os.SystemProperties.get("ril.signal.param");
++	String RilStrength[] = GetRilStrength.split(",");
++	int RilRssiLevel = Integer.parseInt(RilStrength[1]);
++
++	switch (RilRssiLevel) {
++		case 0:
++			mLteRsrp = -113;
++			break;
++		case 1:
++			mLteRsrp = -112;
++			break;
++		case 2:
++			mLteRsrp = -111;
++			break;
++		case 3:
++			mLteRsrp = -110;
++			break;
++		case 4:
++			mLteRsrp = -109;
++			break;
++		case 5:
++			mLteRsrp = -108;
++			break;
++		case 6:
++			mLteRsrp = -107;
++			break;
++		case 7:
++			mLteRsrp = -106;
++			break;
++		case 8:
++			mLteRsrp = -105;
++			break;
++		case 9:
++			mLteRsrp = -104;
++			break;
++		case 10:
++			mLteRsrp = -103;
++			break;
++		case 11:
++			mLteRsrp = -102;
++			break;
++		case 12:
++			mLteRsrp = -101;
++			break;
++		case 13:
++			mLteRsrp = -99;
++			break;
++		case 14:
++			mLteRsrp = -98;
++			break;
++		case 15:
++			mLteRsrp = -97;
++			break;
++		case 16:
++			mLteRsrp = -96;
++			break;
++		case 17:
++			mLteRsrp = -95;
++			break;
++		case 18:
++			mLteRsrp = -94;
++			break;
++		case 19:
++			mLteRsrp = -93;
++			break;
++		case 20:
++			mLteRsrp = -92;
++			break;
++		case 21:
++			mLteRsrp = -91;
++			break;
++		case 22:
++			mLteRsrp = -90;
++			break;
++		case 23:
++			mLteRsrp = -89;
++			break;
++		case 24:
++			mLteRsrp = -88;
++			break;
++		case 25:
++			mLteRsrp = -87;
++			break;
++		case 26:
++			mLteRsrp = -86;
++			break;
++		case 27:
++			mLteRsrp = -85;
++			break;
++		case 28:
++			mLteRsrp = -84;
++			break;
++		case 29:
++			mLteRsrp = -83;
++			break;
++		case 30:
++			mLteRsrp = -82;
++			break;
++		case 31:
++			mLteRsrp = -81;
++			break;
++		case 32:
++			mLteRsrp = -80;
++			break;
++		case 33:
++			mLteRsrp = -79;
++			break;
++		case 34:
++			mLteRsrp = -78;
++			break;
++		case 35:
++			mLteRsrp = -77;
++			break;
++		case 36:
++			mLteRsrp = -75;
++			break;
++		case 37:
++			mLteRsrp = -74;
++			break;
++		case 38:
++			mLteRsrp = -73;
++			break;
++		case 39:
++			mLteRsrp = -72;
++			break;
++		case 40:
++			mLteRsrp = -70;
++			break;
++		case 41:
++			mLteRsrp = -69;
++			break;
++		case 42:
++			mLteRsrp = -68;
++			break;
++		case 43:
++			mLteRsrp = -67;
++			break;
++		case 44:
++			mLteRsrp = -65;
++			break;
++		case 45:
++			mLteRsrp = -64;
++			break;
++		case 46:
++			mLteRsrp = -63;
++			break;
++		case 47:
++			mLteRsrp = -62;
++			break;
++		case 48:
++			mLteRsrp = -60;
++			break;
++		case 49:
++			mLteRsrp = -59;
++			break;
++		case 50:
++			mLteRsrp = -58;
++			break;
++		case 51:
++			mLteRsrp = -56;
++			break;
++		case 52:
++			mLteRsrp = -55;
++			break;
++		case 53:
++			mLteRsrp = -53;
++			break;
++		case 54:
++			mLteRsrp = -52;
++			break;
++		case 55:
++			mLteRsrp = -50;
++			break;
++		case 56:
++			mLteRsrp = -50;
++			break;
++		case 57:
++			mLteRsrp = -49;
++			break;
++		case 58:
++			mLteRsrp = -48;
++			break;
++		case 59:
++			mLteRsrp = -48;
++			break;
++		case 60:
++			mLteRsrp = -47;
++			break;
++		case 61:
++			mLteRsrp = -46;
++			break;
++		case 62:
++			mLteRsrp = -45;
++			break;
++		case 64:
++			mLteRsrp = -44;
++			break;
++		default:
++			return mLteRsrp;
++	}
+         return mLteRsrp;
+     }
+ 
