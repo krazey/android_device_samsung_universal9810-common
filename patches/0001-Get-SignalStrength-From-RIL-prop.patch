@@ -1,17 +1,15 @@
---- telephony/java/android/telephony/SignalStrength.java.Original	2019-06-19 09:17:41.924344263 +0100
-+++ telephony/java/android/telephony/SignalStrength.java	2019-06-18 13:27:34.529159918 +0100
-@@ -854,7 +854,10 @@
+--- telephony/java/android/telephony/SignalStrength.java.Original	2019-06-24 09:36:46.311971764 +0100
++++ telephony/java/android/telephony/SignalStrength.java	2019-06-24 09:39:35.269385842 +0100
+@@ -854,6 +854,9 @@
           * RSRQ = quality of signal dB = Number of Resource blocks*RSRP/RSSI
           * SNR = gain = signal/noise ratio = -10log P1/P2 dB
           */
--        int rssiIconLevel = SIGNAL_STRENGTH_NONE_OR_UNKNOWN, rsrpIconLevel = -1, snrIconLevel = -1;
-+        String GetRilStrength = android.os.SystemProperties.get("ril.signal.param");
++	String GetRilStrength = android.os.SystemProperties.get("ril.signal.param");
 +	String RilStrength[] = GetRilStrength.split(",");
 +
-+	int rssiIconLevel = SIGNAL_STRENGTH_NONE_OR_UNKNOWN, rsrpIconLevel = -1, snrIconLevel = -1;
+         int rssiIconLevel = SIGNAL_STRENGTH_NONE_OR_UNKNOWN, rsrpIconLevel = -1, snrIconLevel = -1;
  
          if (mLteRsrp > MAX_LTE_RSRP || mLteRsrp < MIN_LTE_RSRP) {
-             if (mLteRsrp != INVALID) {
 @@ -915,7 +918,7 @@
          // TODO the range here is probably supposed to be (0..31, 99). It's unclear if anyone relies
          // on the current incorrect range check, so this will be fixed in a future release with more
@@ -21,7 +19,7 @@
          else if (mLteSignalStrength >= 12) rssiIconLevel = SIGNAL_STRENGTH_GREAT;
          else if (mLteSignalStrength >= 8) rssiIconLevel = SIGNAL_STRENGTH_GOOD;
          else if (mLteSignalStrength >= 5) rssiIconLevel = SIGNAL_STRENGTH_MODERATE;
-@@ -923,8 +926,15 @@
+@@ -923,7 +926,15 @@
  
          if (DBG) log("getLteLevel - rssi:" + mLteSignalStrength + " rssiIconLevel:"
                  + rssiIconLevel);
@@ -29,12 +27,12 @@
 +        return rssiIconLevel;*/
 +
 +	if (Integer.parseInt(RilStrength[1]) > 63) rssiIconLevel = SIGNAL_STRENGTH_NONE_OR_UNKNOWN;
-+	else if (Integer.parseInt(RilStrength[1]) >= 12) rssiIconLevel = SIGNAL_STRENGTH_GREAT;
-+	else if (Integer.parseInt(RilStrength[1]) >= 8) rssiIconLevel = SIGNAL_STRENGTH_GOOD;
-+        else if (Integer.parseInt(RilStrength[1]) >= 5) rssiIconLevel = SIGNAL_STRENGTH_MODERATE;
-+        else if (Integer.parseInt(RilStrength[1]) >= 0) rssiIconLevel = SIGNAL_STRENGTH_POOR;
- 
++	else if (Integer.parseInt(RilStrength[1]) >= 10) rssiIconLevel = SIGNAL_STRENGTH_GREAT;
++	else if (Integer.parseInt(RilStrength[1]) >= 6) rssiIconLevel = SIGNAL_STRENGTH_GOOD;
++        else if (Integer.parseInt(RilStrength[1]) >= 0) rssiIconLevel = SIGNAL_STRENGTH_MODERATE;
++        else if (Integer.parseInt(RilStrength[1]) >= -7) rssiIconLevel = SIGNAL_STRENGTH_POOR;
++
 +	return rssiIconLevel;
+ 
      }
  
-     /**
