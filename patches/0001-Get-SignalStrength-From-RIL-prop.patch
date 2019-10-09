@@ -10,7 +10,7 @@
          int rssiIconLevel = SIGNAL_STRENGTH_NONE_OR_UNKNOWN, rsrpIconLevel = -1, snrIconLevel = -1;
  
          if (mLteRsrp > MAX_LTE_RSRP || mLteRsrp < MIN_LTE_RSRP) {
-@@ -915,7 +918,7 @@
+@@ -923,7 +926,7 @@
          // TODO the range here is probably supposed to be (0..31, 99). It's unclear if anyone relies
          // on the current incorrect range check, so this will be fixed in a future release with more
          // soak time
@@ -19,7 +19,7 @@
          else if (mLteSignalStrength >= 12) rssiIconLevel = SIGNAL_STRENGTH_GREAT;
          else if (mLteSignalStrength >= 8) rssiIconLevel = SIGNAL_STRENGTH_GOOD;
          else if (mLteSignalStrength >= 5) rssiIconLevel = SIGNAL_STRENGTH_MODERATE;
-@@ -923,7 +926,15 @@
+@@ -931,7 +934,15 @@
  
          if (DBG) log("getLteLevel - rssi:" + mLteSignalStrength + " rssiIconLevel:"
                  + rssiIconLevel);
