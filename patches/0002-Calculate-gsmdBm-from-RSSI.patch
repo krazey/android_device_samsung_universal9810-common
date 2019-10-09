@@ -1,5 +1,5 @@
---- telephony/java/android/telephony/SignalStrength.java.Original	2019-06-24 09:42:03.362810942 +0100
-+++ telephony/java/android/telephony/SignalStrength.java	2019-06-24 09:43:29.295885872 +0100
+--- a/frameworks/base/telephony/java/android/telephony/SignalStrength.java
++++ b/frameworks/base/telephony/java/android/telephony/SignalStrength.java
 @@ -662,16 +662,240 @@
       * @hide
       */

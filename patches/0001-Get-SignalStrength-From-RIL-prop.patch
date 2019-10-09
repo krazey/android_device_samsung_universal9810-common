@@ -1,5 +1,5 @@
---- telephony/java/android/telephony/SignalStrength.java.Original	2019-06-24 09:36:46.311971764 +0100
-+++ telephony/java/android/telephony/SignalStrength.java	2019-06-24 09:39:35.269385842 +0100
+--- a/frameworks/base/telephony/java/android/telephony/SignalStrength.java
++++ b/frameworks/base/telephony/java/android/telephony/SignalStrength.java
 @@ -854,6 +854,9 @@
           * RSRQ = quality of signal dB = Number of Resource blocks*RSRP/RSSI
           * SNR = gain = signal/noise ratio = -10log P1/P2 dB
