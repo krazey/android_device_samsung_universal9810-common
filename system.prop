@@ -13,3 +13,6 @@ config.disable_consumerir=true
 
 # Enable ADB authentication
 ro.adb.secure=1
+
+# Use Camera HAL1 for these packages
+vendor.camera.hal1.packagelist=com.whatsapp,com.instagram.android,com.snapchat.android,com.facebook.orca
