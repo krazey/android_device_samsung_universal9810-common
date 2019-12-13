@@ -230,6 +230,10 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     android.hardware.health@2.0-impl
 
+# GPS
+PRODUCT_PACKAGES += \
+    android.hardware.gnss@1.1-impl
+
 # NFC
 PRODUCT_PACKAGES += \
     android.hardware.nfc@1.0-impl \
