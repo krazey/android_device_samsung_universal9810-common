@@ -52,6 +52,14 @@ BOARD_FLASH_BLOCK_SIZE := 131072
 # Filesystem
 TARGET_USERIMAGES_USE_EXT4 := true
 TARGET_USERIMAGES_USE_F2FS := true
+TARGET_FS_CONFIG_GEN := $(COMMON_PATH)/config.fs
+
+# Ramdisk
+BOARD_ROOT_EXTRA_FOLDERS := efs cpefs dqmdbg
+BOARD_ROOT_EXTRA_SYMLINKS += /dev/block/platform/11120000.ufs/by-name/PERSISTENT:/dev/block/persistent
+
+# SELinux
+BOARD_SEPOLICY_DIRS := $(COMMON_PATH)/sepolicy
 
 # Extended Filesystem Support
 TARGET_EXFAT_DRIVER := sdfat
