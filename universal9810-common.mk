@@ -85,17 +85,6 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/audio/mixer_paths_r08.xml:vendor/etc/mixer_paths_r08.xml \
     $(LOCAL_PATH)/audio/mixer_gains_r08.xml:vendor/etc/mixer_gains_r08.xml
 
-PRODUCT_COPY_FILES += \
-    frameworks/av/services/audiopolicy/config/usb_audio_policy_configuration.xml:system/etc/usb_audio_policy_configuration.xml
-
-PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/audio/mixer_paths.xml:system/etc/mixer_paths.xml \
-    $(LOCAL_PATH)/audio/mixer_gains.xml:system/etc/mixer_gains.xml \
-    $(LOCAL_PATH)/audio/mixer_paths_r02.xml:system/etc/mixer_paths_r02.xml \
-    $(LOCAL_PATH)/audio/mixer_gains_r02.xml:system/etc/mixer_gains_r02.xml \
-    $(LOCAL_PATH)/audio/mixer_paths_r08.xml:system/etc/mixer_paths_r08.xml \
-    $(LOCAL_PATH)/audio/mixer_gains_r08.xml:system/etc/mixer_gains_r08.xml
-
 # Bluetooth
 PRODUCT_PACKAGES += \
     audio.a2dp.default
