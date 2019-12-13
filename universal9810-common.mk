@@ -151,6 +151,10 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     libhwjpeg
 
+# Touch features
+PRODUCT_PACKAGES += \
+    vendor.lineage.touch@1.0-service.samsung
+
 # Net
 PRODUCT_PACKAGES += \
     netutils-wrapper-1.0
