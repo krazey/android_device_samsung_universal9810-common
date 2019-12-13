@@ -226,6 +226,10 @@ PRODUCT_PACKAGES += \
     android.hardware.wifi.supplicant@1.1 \
     android.hardware.wifi.hostapd@1.0
 
+# Healthd
+PRODUCT_PACKAGES += \
+    android.hardware.health@2.0-impl
+
 # NFC
 PRODUCT_PACKAGES += \
     android.hardware.nfc@1.0-impl \
