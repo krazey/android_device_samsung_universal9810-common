@@ -166,6 +166,29 @@ PRODUCT_PACKAGES += \
     android.hardware.keymaster@4.0-impl \
     libsoftkeymasterdevice
 
+# Graphics
+PRODUCT_PACKAGES += \
+    libhwc2on1adapter \
+    android.hardware.graphics.allocator@2.0-impl \
+    android.hardware.graphics.allocator@2.0-service \
+    android.hardware.graphics.composer@2.2-service \
+    android.hardware.graphics.composer@2.2-impl \
+    android.hardware.graphics.common@2.1-impl \
+    android.hardware.graphics.mapper@2.0-impl \
+    android.hardware.graphics.mapper@3.0-impl \
+    android.hardware.memtrack@1.0-impl \
+    android.hardware.memtrack@1.0-service \
+    android.hardware.renderscript@1.0-impl \
+    libhwc2on1fbadapter \
+    libc++
+
+PRODUCT_PACKAGES += \
+    libtinyxml
+
+PRODUCT_PACKAGES += \
+    libion \
+    libfimg
+
 # Net
 PRODUCT_PACKAGES += \
     netutils-wrapper-1.0
