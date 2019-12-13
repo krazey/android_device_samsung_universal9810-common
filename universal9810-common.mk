@@ -130,6 +130,24 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     Snap
 
+PRODUCT_PACKAGES += \
+    android.hardware.camera.common@1.0 \
+    android.hardware.camera.provider@2.4-legacy \
+    android.hardware.camera.provider@2.4 \
+    android.hardware.camera.provider@2.5-legacy \
+    android.hardware.camera.provider@2.5 \
+    camera.device@1.0-impl \
+    camera.device@1.0 \
+    camera.device@3.2-impl \
+    camera.device@3.2 \
+    camera.device@3.3-impl \
+    camera.device@3.3 \
+    camera.device@3.4-impl \
+    camera.device@3.4 \
+    camera.device@3.5-impl \
+    camera.device@3.5 \
+    libexif
+
 # Net
 PRODUCT_PACKAGES += \
     netutils-wrapper-1.0
