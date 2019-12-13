@@ -2,6 +2,7 @@
 # SPDX-License-Identifier: Apache-2.0
 
 COMMON_PATH := device/samsung/universal9810-common
+BUILD_BROKEN_DUP_RULES := true
 
 # Platform
 BOARD_VENDOR := samsung
