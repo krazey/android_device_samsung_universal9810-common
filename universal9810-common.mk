@@ -85,6 +85,23 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/audio/mixer_paths_r08.xml:vendor/etc/mixer_paths_r08.xml \
     $(LOCAL_PATH)/audio/mixer_gains_r08.xml:vendor/etc/mixer_gains_r08.xml
 
+# Audio
+PRODUCT_PACKAGES += \
+    android.hardware.audio@2.0-impl \
+    android.hardware.audio@2.0-service \
+    android.hardware.audio@5.0-impl \
+    android.hardware.audio.common@5.0 \
+    android.hardware.audio.common@5.0-util \
+    android.hardware.audio.effect@2.0-impl \
+    android.hardware.audio.effect@5.0 \
+    android.hardware.audio.effect@5.0-impl \
+    android.hardware.soundtrigger@2.0-impl \
+    audio.a2dp.default \
+    audio.usb.default \
+    audio.r_submix.default \
+    audio.primary.default \
+    libtinycompress 
+
 # Bluetooth
 PRODUCT_PACKAGES += \
     audio.a2dp.default
