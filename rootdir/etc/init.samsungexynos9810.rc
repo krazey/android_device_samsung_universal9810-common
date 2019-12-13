@@ -1,10 +1,9 @@
-import init.samsung.rc
-import init.samsungexynos9810.usb.rc
-import init.gps.rc
-import init.baseband.rc
+import /vendor/etc/init/hw/init.samsung.rc
+import /vendor/etc/init/hw/init.samsungexynos9810.usb.rc
+import /vendor/etc/init/hw/init.gps.rc
+import /vendor/etc/init/hw/init.baseband.rc
 
 on early-init
-    mkdir /efs 0771 radio system
     mount debugfs /sys/kernel/debug /sys/kernel/debug
 
 on init
@@ -24,10 +23,10 @@ on init
 
     symlink /data/app /factory
     #Reactivation Lock
-    symlink /dev/block/DUMMY /dev/block/steady
+    symlink /dev/block/platform/11120000.ufs/by-name/STEADY /dev/block/steady
 
     #Google FRP solution
-    symlink /dev/block/DUMMY /dev/block/persistent
+    symlink /dev/block/platform/11120000.ufs/by-name/PERSISTENT /dev/block/persistent
 
 # Sensors
 # Fingerprint_sensor
@@ -44,72 +43,12 @@ on init
     chown system system /efs/sec_efs/ssp_data
     chmod 0644 /efs/sec_efs/ssp_data
 
-# Accelerometer_sensor
-    chown system radio /sys/class/sensors/accelerometer_sensor/raw_data
-    chown system radio /sys/class/sensors/accelerometer_sensor/calibration
-    chown system radio /sys/class/sensors/accelerometer_sensor/reactive_alert
-    chown system radio /sys/class/sensors/accelerometer_sensor/vendor
-    chown system radio /sys/class/sensors/accelerometer_sensor/name
-    chown system radio /sys/class/sensors/accelerometer_sensor/selftest
-    chown system radio /sys/class/sensors/accelerometer_sensor/lowpassfilter
-    chown system radio /sys/class/sensors/accelerometer_sensor/dhr_sensor_info
-
-# Proximity_sensor
-    chown system radio /sys/class/sensors/proximity_sensor/raw_data
-    chown system radio /sys/class/sensors/proximity_sensor/prox_avg
-    chown system radio /sys/class/sensors/proximity_sensor/vendor
-    chown system radio /sys/class/sensors/proximity_sensor/name
-    chown system radio /sys/class/sensors/proximity_sensor/thresh_high
-    chown system radio /sys/class/sensors/proximity_sensor/thresh_low
-    chown system radio /sys/class/sensors/proximity_sensor/thresh_detect_high
-    chown system radio /sys/class/sensors/proximity_sensor/thresh_detect_low
-    chown system radio /sys/class/sensors/proximity_sensor/barcode_emul_en
-    chown system radio /sys/class/sensors/proximity_sensor/prox_offset_pass
-    chown system radio /sys/class/sensors/proximity_sensor/prox_trim
-    chown system radio /sys/class/sensors/proximity_sensor/prox_probe
-    chown system radio /sys/class/sensors/proximity_sensor/prox_alert_thresh
-    chown system radio /sys/class/sensors/proximity_sensor/dhr_sensor_info
-
-# Light_sensor
-    chown system radio /sys/class/sensors/light_sensor/lux
-    chown system radio /sys/class/sensors/light_sensor/raw_data
-    chown system radio /sys/class/sensors/light_sensor/vendor
-    chown system radio /sys/class/sensors/light_sensor/name
-    chown system radio /sys/class/sensors/light_sensor/coef
-
 # Hidden_hole
     chown system radio /sys/class/sensors/hidden_hole/hh_is_exist_efs
     chown system radio /sys/class/sensors/hidden_hole/hh_ver
     chown system radio /sys/class/sensors/hidden_hole/hh_write_all_data
     chown system radio /sys/class/sensors/hidden_hole/hh_check_coef
     chown system radio /sys/class/sensors/hidden_hole/hh_ext_prox_th
-
-# Gyro_sensor
-    chown system radio /sys/class/sensors/gyro_sensor/power_on
-    chown system radio /sys/class/sensors/gyro_sensor/power_off
-    chown system media /sys/class/sensors/gyro_sensor/temperature
-    chown system radio /sys/class/sensors/gyro_sensor/selftest
-    chown system radio /sys/class/sensors/gyro_sensor/selftest_dps
-    chown system radio /sys/class/sensors/gyro_sensor/vendor
-    chown system radio /sys/class/sensors/gyro_sensor/name
-    chown system radio /sys/class/sensors/gyro_sensor/selftest_revised
-
-# Barometer_sensor
-    chown system radio /sys/class/sensors/barometer_sensor/sea_level_pressure
-    chown system radio /sys/class/sensors/barometer_sensor/vendor
-    chown system radio /sys/class/sensors/barometer_sensor/name
-    chown system radio /sys/class/sensors/barometer_sensor/calibration
-    chown system radio /sys/class/sensors/barometer_sensor/temperature
-
-# Magnetic_sensor
-    chown system radio /sys/class/sensors/magnetic_sensor/selftest
-    chown system radio /sys/class/sensors/magnetic_sensor/raw_data
-    chown system radio /sys/class/sensors/magnetic_sensor/vendor
-    chown system radio /sys/class/sensors/magnetic_sensor/name
-    chown system radio /sys/class/sensors/magnetic_sensor/dhr_sensor_info
-    chown system radio /sys/class/sensors/magnetic_sensor/selftest
-    chown system radio /sys/class/sensors/magnetic_sensor/adc
-    chown system radio /sys/class/sensors/magnetic_sensor/status
 
 # HRM_sensor
     chown system radio /sys/class/sensors/hrm_sensor/name
@@ -155,46 +94,6 @@ on init
     chown system radio /sys/class/sensors/grip_sensor/grip_flush
     chown system radio /sys/class/sensors/grip_sensor/irq_count
 
-# SensorHub
-    chown system radio /sys/class/sensors/ssp_sensor/enable
-    chown system radio /sys/class/sensors/ssp_sensor/mcu_rev
-    chown system radio /sys/class/sensors/ssp_sensor/mcu_name
-    chown system radio /sys/class/sensors/ssp_sensor/mcu_test
-    chown system radio /sys/class/sensors/ssp_sensor/mcu_reset
-    chown system radio /sys/class/sensors/ssp_sensor/mcu_update
-    chown system radio /sys/class/sensors/ssp_sensor/mcu_sleep_test
-    chown system radio /sys/class/sensors/ssp_sensor/ori_poll_delay
-    chown system radio /sys/class/sensors/ssp_sensor/thermistor_channel_0
-    chown system radio /sys/class/sensors/ssp_sensor/thermistor_channel_1
-    chown system radio /sys/class/sensors/ssp_sensor/bcm_minidump
-    chown system radio /sys/class/sensors/ssp_sensor/reset_info
-    chown root system /sys/class/sec/sensorhub/mcu_power
-
-# Sensorhub IIO
-    chown system radio /sys/class/sensors/ssp_sensor/accel_poll_delay
-    chown system radio /sys/class/sensors/ssp_sensor/rot_poll_delay
-    chown system radio /sys/class/sensors/ssp_sensor/game_rot_poll_delay
-    chown system radio /sys/class/sensors/ssp_sensor/step_det_poll_delay
-    chown system radio /sys/class/sensors/ssp_sensor/gyro_poll_delay
-    chown system radio /sys/class/sensors/ssp_sensor/uncalib_gyro_poll_delay
-    chown system radio /sys/class/sensors/ssp_sensor/mag_poll_delay
-    chown system radio /sys/class/sensors/ssp_sensor/uncal_mag_poll_delay
-    chown system radio /sys/class/sensors/ssp_sensor/light_poll_delay
-    chown system radio /sys/class/sensors/ssp_sensor/light_flicker_poll_delay
-    chown system radio /sys/class/sensors/ssp_sensor/light_ir_poll_delay
-    chown system radio /sys/class/sensors/ssp_sensor/prox_alert_poll_delay
-    chown system radio /sys/class/sensors/ssp_sensor/pressure_poll_delay
-    chown system radio /sys/class/sensors/ssp_sensor/tilt_poll_delay
-    chown system radio /sys/class/sensors/ssp_sensor/pickup_poll_delay
-    chown system radio /sys/class/sensors/ssp_sensor/prox_poll_delay
-    chown system radio /sys/class/sensors/ssp_sensor/sig_motion_poll_delay
-    chown system radio /sys/class/sensors/ssp_sensor/step_cnt_poll_delay
-    chown system radio /sys/class/sensors/ssp_sensor/uncal_gyro_poll_delay
-    chown system radio /sys/class/sensors/ssp_sensor/interrupt_gyro_poll_delay
-    chown system radio /sys/class/sensors/ssp_sensor/ssp_flush
-    chown system radio /sys/class/sensors/ssp_sensor/sensor_state
-    chown system radio /sys/class/sensors/ssp_sensor/sensor_dump
-
  # MOBEAM
     chown system radio /sys/class/sec/sec_barcode_emul/vendor
     chown system radio /sys/class/sec/sec_barcode_emul/name
@@ -222,6 +121,10 @@ on late-fs
     write /sys/block/sda/queue/nr_requests 256
 
 on post-fs-data
+# Clear existing log and start the service
+    rm /cache/boot_log.txt
+    start logger
+
 # Log data folder
     mkdir /data/log 0771 radio system
     mkdir /data/vendor 0771 radio system
@@ -229,6 +132,9 @@ on post-fs-data
     mkdir /data/vendor/log/abox 0771 audioserver system
 
     setprop vold.post_fs_data_done 1
+
+# Vibrator
+    chown system system /sys/class/timed_output/vibrator/haptic_engine
 
 # Permissions for audio
     chown system radio /sys/class/audio/earjack/key_state
@@ -669,7 +575,7 @@ on boot
     chown root system /efs/FactoryApp/mag_cal_param
 
 on fs
-    mount_all /fstab.samsungexynos9810
+    mount_all /vendor/etc/fstab.samsungexynos9810
     chown radio system /efs
     restorecon_recursive /efs
 
@@ -859,6 +765,7 @@ on property:ro.bootmode=charger
 
 on property:sys.boot_completed=1
     stop proca
+    stop logger
 
     write /dev/cpuset/top-app/cpus 0-7
     write /dev/cpuset/foreground/boost/cpus 0-3,6-7
@@ -894,3 +801,9 @@ service at_distributor /system/bin/true
 service sec-light-hal-2-0 /system/bin/true
     disabled
  
+service logger /system/bin/logcat -b all -D -f /cache/boot_log.txt
+    class main
+    user root
+    group root system
+    disabled
+    oneshot
