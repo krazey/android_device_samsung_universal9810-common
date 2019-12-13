@@ -216,6 +216,16 @@ PRODUCT_PACKAGES += \
     android.system.net.netd@1.0 \
     libandroid_net \
 
+PRODUCT_PACKAGES += \
+    android.hardware.wifi@1.0-service \
+    android.hardware.wifi@1.0 \
+    android.hardware.wifi@1.1 \
+    android.hardware.wifi@1.2 \
+    android.hardware.wifi.supplicant@1.0 \
+    android.hardware.wifi.supplicant@1.0-service \
+    android.hardware.wifi.supplicant@1.1 \
+    android.hardware.wifi.hostapd@1.0
+
 # NFC
 PRODUCT_PACKAGES += \
     android.hardware.nfc@1.0-impl \
