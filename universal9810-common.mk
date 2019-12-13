@@ -160,6 +160,12 @@ PRODUCT_PACKAGES += \
     android.hardware.drm@1.0-impl \
     android.hardware.drm@1.0-service
 
+# Keymaster
+PRODUCT_PACKAGES += \
+    android.hardware.keymaster@4.0-service \
+    android.hardware.keymaster@4.0-impl \
+    libsoftkeymasterdevice
+
 # Net
 PRODUCT_PACKAGES += \
     netutils-wrapper-1.0
