@@ -193,6 +193,13 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     android.hardware.cas@1.1-service
 
+# Radio
+PRODUCT_PACKAGES += \
+    libxml2 \
+    libprotobuf-cpp-full \
+    android.hardware.radio@1.2 \
+    android.hardware.radio.deprecated@1.0
+
 # Net
 PRODUCT_PACKAGES += \
     netutils-wrapper-1.0
