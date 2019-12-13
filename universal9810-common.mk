@@ -148,6 +148,9 @@ PRODUCT_PACKAGES += \
     camera.device@3.5 \
     libexif
 
+PRODUCT_PACKAGES += \
+    libhwjpeg
+
 # Net
 PRODUCT_PACKAGES += \
     netutils-wrapper-1.0
