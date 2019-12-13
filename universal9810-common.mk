@@ -200,6 +200,16 @@ PRODUCT_PACKAGES += \
     android.hardware.radio@1.2 \
     android.hardware.radio.deprecated@1.0
 
+PRODUCT_PACKAGES += \
+    rild \
+    libril \
+    libsecril-client \
+    libsecril-client-sap \
+    libreference-ril
+
+PRODUCT_PACKAGES += \
+    modemloader
+
 # Net
 PRODUCT_PACKAGES += \
     netutils-wrapper-1.0
