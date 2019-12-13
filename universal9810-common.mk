@@ -276,6 +276,13 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     android.hardware.usb@1.0-service.basic
 
+# ADB
+PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
+    persist.sys.usb.config=adb \
+    ro.adb.secure=0 \
+    ro.secure=0 \
+    ro.hardware.egl=mali
+
 # Keylayout
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/keylayout/gpio_keys.kl:system/usr/keylayout/gpio_keys.kl
