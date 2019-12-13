@@ -189,6 +189,10 @@ PRODUCT_PACKAGES += \
     libion \
     libfimg
 
+# Cas
+PRODUCT_PACKAGES += \
+    android.hardware.cas@1.1-service
+
 # Net
 PRODUCT_PACKAGES += \
     netutils-wrapper-1.0
