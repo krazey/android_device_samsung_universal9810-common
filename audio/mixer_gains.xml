@@ -1,8 +1,4 @@
 <mixer>
-<!--
-	<ctl name="SPK Analog Left Gain" value="15dB" />
-	<ctl name="SPK Analog Right Gain" value="15dB" />
--->
 	<!-- Output volume stage -->
 	<!-- media playback volume -->
 	<path name="gain-media-handset">
@@ -26,7 +22,6 @@
 	</path>
 
 	<path name="gain-media-speaker">
-		<ctl name="SPK Analog Left Gain" value="15dB" />
 		<ctl name="SPK Analog Right Gain" value="15dB" />
 	</path>
 
@@ -61,19 +56,18 @@
 	</path>
 
 	<path name="gain-media-speaker-headset">
-		<ctl name="SPK Analog Left Gain" value="15dB" />
 		<ctl name="SPK Analog Right Gain" value="15dB" />
-		<ctl name="HPOUT2L Impedance Volume" value="80" />
-		<ctl name="HPOUT2R Impedance Volume" value="50" />
+		<ctl name="HPOUT2L Impedance Volume" value="47" />
+		<ctl name="HPOUT2R Impedance Volume" value="47" />
 		<ctl name="HPOUT2L Input 1 Volume" value="29" />
 		<ctl name="HPOUT2R Input 1 Volume" value="29" />
 	</path>
 
 	<path name="gain-media-dual-speaker-headset">
-		<ctl name="SPK Analog Left Gain" value="15dB" />
-		<ctl name="SPK Analog Right Gain" value="15dB" />
-		<ctl name="HPOUT2L Impedance Volume" value="80" />
-		<ctl name="HPOUT2R Impedance Volume" value="50" />
+		<ctl name="SPK Analog Left Gain" value="3dB" />
+		<ctl name="SPK Analog Right Gain" value="12dB" />
+		<ctl name="HPOUT2L Impedance Volume" value="47" />
+		<ctl name="HPOUT2R Impedance Volume" value="47" />
 		<ctl name="HPOUT2L Input 1 Volume" value="29" />
 		<ctl name="HPOUT2R Input 1 Volume" value="29" />
 	</path>
@@ -89,14 +83,24 @@
 	<path name="gain-media-bt-sco-headset">
 	</path>
 
-	<path name="gain-media-speaker-bt-sco-headset">
+	<path name="gain-media-bt-a2dp-headphone">
+	</path>
+
+	<path name="gain-media-bt-a2dp-headset">
+	</path>
+
+	<path name="gain-media-dual-speaker-bt-a2dp-headphone">
 		<ctl name="SPK Analog Left Gain" value="15dB" />
 		<ctl name="SPK Analog Right Gain" value="15dB" />
 	</path>
 
-	<path name="gain-media-dual-speaker-bt-sco-headset">
-		<ctl name="SPK Analog Left Gain" value="15dB" />
+	<path name="gain-media-speaker-bt-sco-headset">
 		<ctl name="SPK Analog Right Gain" value="15dB" />
+	</path>
+
+	<path name="gain-media-dual-speaker-bt-sco-headset">
+		<ctl name="SPK Analog Left Gain" value="3dB" />
+		<ctl name="SPK Analog Right Gain" value="12dB" />
 	</path>
 
 	<!-- Ringtone playback volume -->
@@ -123,19 +127,19 @@
 
 	<path name="gain-ringtone-speaker-headset">
 		<ctl name="SPK Analog Right Gain" value="15dB" />
-		<ctl name="HPOUT2L Impedance Volume" value="80" />
-		<ctl name="HPOUT2R Impedance Volume" value="50" />
+		<ctl name="HPOUT2L Impedance Volume" value="47" />
+		<ctl name="HPOUT2R Impedance Volume" value="47" />
 		<ctl name="HPOUT2L Input 1 Volume" value="32" />
 		<ctl name="HPOUT2R Input 1 Volume" value="32" />
 	</path>
 
 	<path name="gain-ringtone-dual-speaker-headset">
-		<ctl name="SPK Analog Left Gain" value="15dB" />
-		<ctl name="SPK Analog Right Gain" value="15dB" />
-		<ctl name="HPOUT2L Impedance Volume" value="80" />
-		<ctl name="HPOUT2R Impedance Volume" value="50" />
-		<ctl name="HPOUT2L Input 1 Volume" value="32" />
-		<ctl name="HPOUT2R Input 1 Volume" value="32" />
+		<ctl name="SPK Analog Left Gain" value="3dB" />
+		<ctl name="SPK Analog Right Gain" value="12dB" />
+		<ctl name="HPOUT2L Impedance Volume" value="47" />
+		<ctl name="HPOUT2R Impedance Volume" value="47" />
+		<ctl name="HPOUT2L Input 1 Volume" value="29" />
+		<ctl name="HPOUT2R Input 1 Volume" value="29" />
 	</path>
 
 	<path name="gain-ringtone-speaker-headphone">
@@ -154,8 +158,8 @@
 	</path>
 
 	<path name="gain-ringtone-dual-speaker-bt-sco-headset">
-		<ctl name="SPK Analog Left Gain" value="15dB" />
-		<ctl name="SPK Analog Right Gain" value="15dB" />
+		<ctl name="SPK Analog Left Gain" value="3dB" />
+		<ctl name="SPK Analog Right Gain" value="12dB" />
 	</path>
 
 	<!-- Communication playback volume -->
@@ -447,15 +451,15 @@
 	</path>
 
 	<path name="gain-wificall_evs-headset">
-		<ctl name="HPOUT2L Impedance Volume" value="112" />
-		<ctl name="HPOUT2R Impedance Volume" value="112" />
+		<ctl name="HPOUT2L Impedance Volume" value="116" />
+		<ctl name="HPOUT2R Impedance Volume" value="116" />
 		<ctl name="HPOUT2L Input 1 Volume" value="32" />
 		<ctl name="HPOUT2R Input 1 Volume" value="32" />
 	</path>
 
 	<path name="gain-wificall_evs-headphone">
-		<ctl name="HPOUT2L Impedance Volume" value="112" />
-		<ctl name="HPOUT2R Impedance Volume" value="112" />
+		<ctl name="HPOUT2L Impedance Volume" value="116" />
+		<ctl name="HPOUT2R Impedance Volume" value="116" />
 		<ctl name="HPOUT2L Input 1 Volume" value="32" />
 		<ctl name="HPOUT2R Input 1 Volume" value="32" />
 	</path>
@@ -988,6 +992,25 @@
 		<ctl name="SPK Analog Right Gain" value="15dB" />
 	</path>
 
+	<path name="gain-echo_thd_test-handset">
+		<ctl name="Rcv Digital Gain" value="16" />
+		<ctl name="SPK Analog Left Gain" value="3dB" />
+	</path>
+
+	<path name="gain-echo_thd_test-speaker">
+		<ctl name="SPK Analog Right Gain" value="15dB" />
+	</path>
+
+	<path name="gain-echo_thd_test-speaker2">
+		<ctl name="Rcv Digital Gain" value="52" />
+		<ctl name="SPK Analog Left Gain" value="15dB" />
+	</path>
+
+	<path name="gain-echo_thd_test-dual-speaker">
+		<ctl name="SPK Analog Left Gain" value="15dB" />
+		<ctl name="SPK Analog Right Gain" value="15dB" />
+	</path>
+
 	<!-- call forwarding output volume -->
 	<path name="gain-call_forwarding_master">
 		<!-- we use default volume -->
@@ -1100,7 +1123,7 @@
 	</path>
 
 	<path name="gain-camcorder-dualmic">
-		<ctl name="IN3L Digital Volume" value="127" />
+		<ctl name="IN3L Digital Volume" value="122" />
 		<ctl name="IN4L Digital Volume" value="122" />
 	</path>
 
@@ -1116,21 +1139,21 @@
 	</path>
 
 	<path name="gain-camcorder-headphone-mic">
-		<ctl name="IN3L Digital Volume" value="127" />
+		<ctl name="IN3L Digital Volume" value="122" />
 		<ctl name="IN4L Digital Volume" value="122" />
 	</path>
 
 	<!-- voice recording input volume -->
 	<path name="gain-recording-mic">
-		<ctl name="IN3L Digital Volume" value="126" />
+		<ctl name="IN3L Digital Volume" value="120" />
 	</path>
 
 	<path name="gain-recording-2nd-mic">
-		<ctl name="IN4L Digital Volume" value="117" />
+		<ctl name="IN4L Digital Volume" value="120" />
 	</path>
 
 	<path name="gain-recording-dualmic">
-		<ctl name="IN3L Digital Volume" value="126" />
+		<ctl name="IN3L Digital Volume" value="121" />
 		<ctl name="IN4L Digital Volume" value="121" />
 	</path>
 
@@ -1145,7 +1168,7 @@
 	</path>
 
 	<path name="gain-recording-headphone-mic">
-		<ctl name="IN3L Digital Volume" value="121" />
+		<ctl name="IN3L Digital Volume" value="120" />
 	</path>
 
 	<path name="gain-recording-bt-sco-headset-in">
@@ -1209,11 +1232,11 @@
 
 	<!-- recognition input volume -->
 	<path name="gain-recognition-mic">
-		<ctl name="IN3L Digital Volume" value="171" />
+		<ctl name="IN3L Digital Volume" value="164" />
 	</path>
 
 	<path name="gain-recognition-2nd-mic">
-		<ctl name="IN4L Digital Volume" value="163" />
+		<ctl name="IN4L Digital Volume" value="164" />
 	</path>
 
 	<path name="gain-recognition-headset-mic">
@@ -1222,7 +1245,7 @@
 	</path>
 
 	<path name="gain-recognition-headphone-mic">
-		<ctl name="IN3L Digital Volume" value="171" />
+		<ctl name="IN3L Digital Volume" value="164" />
 	</path>
 
 	<path name="gain-recognition-bt-sco-headset-in">
@@ -1244,8 +1267,8 @@
 
 	<!-- bargein external input volume-->
 	<path name="gain-bargein_external_engine-mic">
-		<ctl name="IN3L Digital Volume" value="116" />
-		<ctl name="IN4L Digital Volume" value="152" />
+		<ctl name="IN3L Digital Volume" value="117" />
+		<ctl name="IN4L Digital Volume" value="132" />
 	</path>
 
 	<path name="gain-bargein_external_engine-headset-mic">
@@ -1258,8 +1281,8 @@
 
 	<!-- svoice/carmode samsung input volume -->
 	<path name="gain-dualmic_samsung_engine-mic">
-		<ctl name="IN3L Digital Volume" value="171" />
-		<ctl name="IN4L Digital Volume" value="163" />
+		<ctl name="IN3L Digital Volume" value="164" />
+		<ctl name="IN4L Digital Volume" value="164" />
 	</path>
 
 	<path name="gain-dualmic_samsung_engine-headset-mic">
@@ -1286,13 +1309,13 @@
 
 	<!-- communication input volume -->
 	<path name="gain-communication-handset-mic">
-		<ctl name="IN3L Digital Volume" value="176" />
-		<ctl name="IN4L Digital Volume" value="168" />
+		<ctl name="IN3L Digital Volume" value="148" />
+		<ctl name="IN4L Digital Volume" value="140" />
 	</path>
 
 	<path name="gain-communication-speaker-mic">
-		<ctl name="IN3L Digital Volume" value="140" />
-		<ctl name="IN4L Digital Volume" value="144" />
+		<ctl name="IN3L Digital Volume" value="136" />
+		<ctl name="IN4L Digital Volume" value="152" />
 	</path>
 
 	<path name="gain-communication-dual-speaker-mic">
@@ -1300,8 +1323,8 @@
 	</path>
 
 	<path name="gain-communication-dex-speaker-mic">
-		<ctl name="IN3L Digital Volume" value="152" />
-		<ctl name="IN4L Digital Volume" value="144" />
+		<ctl name="IN3L Digital Volume" value="136" />
+		<ctl name="IN4L Digital Volume" value="152" />
 	</path>
 
 	<path name="gain-communication-dex-dual-speaker-mic">
@@ -1314,7 +1337,7 @@
 	</path>
 
 	<path name="gain-communication-headphone-mic">
-		<ctl name="IN3L Digital Volume" value="176" />
+		<ctl name="IN3L Digital Volume" value="148" />
 	</path>
 
 	<path name="gain-communication-bt-sco-headset-in">
@@ -1457,7 +1480,7 @@
 
 	<path name="gain-wificall_nb-speaker-mic">
 		<ctl name="IN3L Digital Volume" value="136" />
-		<ctl name="IN4L Digital Volume" value="140" />
+		<ctl name="IN4L Digital Volume" value="152" />
 	</path>
 
 	<path name="gain-wificall_nb-dual-speaker-mic">
@@ -1465,8 +1488,8 @@
 	</path>
 
 	<path name="gain-wificall_nb-dex-speaker-mic">
-		<ctl name="IN3L Digital Volume" value="148" />
-		<ctl name="IN4L Digital Volume" value="140" />
+		<ctl name="IN3L Digital Volume" value="136" />
+		<ctl name="IN4L Digital Volume" value="152" />
 	</path>
 
 	<path name="gain-wificall_nb-dex-dual-speaker-mic">
@@ -1499,7 +1522,7 @@
 
 	<path name="gain-wificall_wb-speaker-mic">
 		<ctl name="IN3L Digital Volume" value="136" />
-		<ctl name="IN4L Digital Volume" value="140" />
+		<ctl name="IN4L Digital Volume" value="152" />
 	</path>
 
 	<path name="gain-wificall_wb-dual-speaker-mic">
@@ -1507,8 +1530,8 @@
 	</path>
 
 	<path name="gain-wificall_wb-dex-speaker-mic">
-		<ctl name="IN3L Digital Volume" value="148" />
-		<ctl name="IN4L Digital Volume" value="140" />
+		<ctl name="IN3L Digital Volume" value="136" />
+		<ctl name="IN4L Digital Volume" value="152" />
 	</path>
 
 	<path name="gain-wificall_wb-dex-dual-speaker-mic">
@@ -1540,8 +1563,8 @@
 	</path>
 
 	<path name="gain-wificall_evs-speaker-mic">
-		<ctl name="IN3L Digital Volume" value="136" />
-		<ctl name="IN4L Digital Volume" value="140" />
+		<ctl name="IN3L Digital Volume" value="128" />
+		<ctl name="IN4L Digital Volume" value="128" />
 	</path>
 
 	<path name="gain-wificall_evs-dual-speaker-mic">
@@ -1549,8 +1572,8 @@
 	</path>
 
 	<path name="gain-wificall_evs-dex-speaker-mic">
-		<ctl name="IN3L Digital Volume" value="148" />
-		<ctl name="IN4L Digital Volume" value="140" />
+		<ctl name="IN3L Digital Volume" value="136" />
+		<ctl name="IN4L Digital Volume" value="128" />
 	</path>
 
 	<path name="gain-wificall_evs-dex-dual-speaker-mic">
@@ -1558,7 +1581,7 @@
 	</path>
 
 	<path name="gain-wificall_evs-headset-mic">
-		<ctl name="IN1L Volume" value="20" />
+		<ctl name="IN1L Volume" value="23" />
 		<ctl name="IN1L Digital Volume" value="128" />
 	</path>
 
@@ -1583,7 +1606,7 @@
 
 	<path name="gain-video_call-speaker-mic">
 		<ctl name="IN3L Digital Volume" value="136" />
-		<ctl name="IN4L Digital Volume" value="140" />
+		<ctl name="IN4L Digital Volume" value="152" />
 	</path>
 
 	<path name="gain-video_call-dual-speaker-mic">
@@ -1591,8 +1614,8 @@
 	</path>
 
 	<path name="gain-video_call-dex-speaker-mic">
-		<ctl name="IN3L Digital Volume" value="148" />
-		<ctl name="IN4L Digital Volume" value="140" />
+		<ctl name="IN3L Digital Volume" value="136" />
+		<ctl name="IN4L Digital Volume" value="152" />
 	</path>
 
 	<path name="gain-video_call-dex-dual-speaker-mic">
@@ -1625,7 +1648,7 @@
 
 	<path name="gain-volte_vt_cp_nb-speaker-mic">
 		<ctl name="IN3L Digital Volume" value="136" />
-		<ctl name="IN4L Digital Volume" value="140" />
+		<ctl name="IN4L Digital Volume" value="152" />
 	</path>
 
 	<path name="gain-volte_vt_cp_nb-dual-speaker-mic">
@@ -1633,8 +1656,8 @@
 	</path>
 
 	<path name="gain-volte_vt_cp_nb-dex-speaker-mic">
-		<ctl name="IN3L Digital Volume" value="148" />
-		<ctl name="IN4L Digital Volume" value="140" />
+		<ctl name="IN3L Digital Volume" value="136" />
+		<ctl name="IN4L Digital Volume" value="152" />
 	</path>
 
 	<path name="gain-volte_vt_cp_nb-dex-dual-speaker-mic">
@@ -1665,7 +1688,7 @@
 
 	<path name="gain-volte_cp_nb-speaker-mic">
 		<ctl name="IN3L Digital Volume" value="136" />
-		<ctl name="IN4L Digital Volume" value="140" />
+		<ctl name="IN4L Digital Volume" value="152" />
 	</path>
 
 	<path name="gain-volte_cp_nb-dual-speaker-mic">
@@ -1673,8 +1696,8 @@
 	</path>
 
 	<path name="gain-volte_cp_nb-dex-speaker-mic">
-		<ctl name="IN3L Digital Volume" value="148" />
-		<ctl name="IN4L Digital Volume" value="140" />
+		<ctl name="IN3L Digital Volume" value="136" />
+		<ctl name="IN4L Digital Volume" value="152" />
 	</path>
 
 	<path name="gain-volte_cp_nb-dex-dual-speaker-mic">
@@ -1705,7 +1728,7 @@
 
 	<path name="gain-volte_cp_wb-speaker-mic">
 		<ctl name="IN3L Digital Volume" value="136" />
-		<ctl name="IN4L Digital Volume" value="140" />
+		<ctl name="IN4L Digital Volume" value="152" />
 	</path>
 
 	<path name="gain-volte_cp_wb-dual-speaker-mic">
@@ -1713,8 +1736,8 @@
 	</path>
 
 	<path name="gain-volte_cp_wb-dex-speaker-mic">
-		<ctl name="IN3L Digital Volume" value="148" />
-		<ctl name="IN4L Digital Volume" value="140" />
+		<ctl name="IN3L Digital Volume" value="136" />
+		<ctl name="IN4L Digital Volume" value="152" />
 	</path>
 
 	<path name="gain-volte_cp_wb-dex-dual-speaker-mic">
@@ -1745,7 +1768,7 @@
 
 	<path name="gain-volte_vt_cp_wb-speaker-mic">
 		<ctl name="IN3L Digital Volume" value="136" />
-		<ctl name="IN4L Digital Volume" value="140" />
+		<ctl name="IN4L Digital Volume" value="152" />
 	</path>
 
 	<path name="gain-volte_vt_cp_wb-dual-speaker-mic">
@@ -1753,8 +1776,8 @@
 	</path>
 
 	<path name="gain-volte_vt_cp_wb-dex-speaker-mic">
-		<ctl name="IN3L Digital Volume" value="148" />
-		<ctl name="IN4L Digital Volume" value="140" />
+		<ctl name="IN3L Digital Volume" value="136" />
+		<ctl name="IN4L Digital Volume" value="152" />
 	</path>
 
 	<path name="gain-volte_vt_cp_wb-dex-dual-speaker-mic">
@@ -1808,8 +1831,8 @@
 		<ctl name="EQ4 B3 Volume" value="12" />
 		<ctl name="EQ4 B4 Volume" value="1" />
 		<ctl name="EQ4 B5 Volume" value="0" />
-		<ctl name="IN3L Digital Volume" value="136" />
-		<ctl name="IN4L Digital Volume" value="140" />
+		<ctl name="IN3L Digital Volume" value="128" />
+		<ctl name="IN4L Digital Volume" value="128" />
 	</path>
 
 	<path name="gain-volte_cp_evs-dual-speaker-mic">
@@ -1829,8 +1852,8 @@
 		<ctl name="EQ4 B3 Volume" value="12" />
 		<ctl name="EQ4 B4 Volume" value="1" />
 		<ctl name="EQ4 B5 Volume" value="0" />
-		<ctl name="IN3L Digital Volume" value="148" />
-		<ctl name="IN4L Digital Volume" value="140" />
+		<ctl name="IN3L Digital Volume" value="136" />
+		<ctl name="IN4L Digital Volume" value="128" />
 	</path>
 
 	<path name="gain-volte_cp_evs-dex-dual-speaker-mic">
@@ -1896,8 +1919,8 @@
 		<ctl name="EQ4 B3 Volume" value="12" />
 		<ctl name="EQ4 B4 Volume" value="1" />
 		<ctl name="EQ4 B5 Volume" value="0" />
-		<ctl name="IN3L Digital Volume" value="136" />
-		<ctl name="IN4L Digital Volume" value="140" />
+		<ctl name="IN3L Digital Volume" value="128" />
+		<ctl name="IN4L Digital Volume" value="128" />
 	</path>
 
 	<path name="gain-volte_vt_cp_evs-dual-speaker-mic">
@@ -1917,7 +1940,7 @@
 		<ctl name="EQ4 B3 Volume" value="12" />
 		<ctl name="EQ4 B4 Volume" value="1" />
 		<ctl name="EQ4 B5 Volume" value="0" />
-		<ctl name="IN3L Digital Volume" value="148" />
+		<ctl name="IN3L Digital Volume" value="136" />
 		<ctl name="IN4L Digital Volume" value="140" />
 	</path>
 
@@ -1962,7 +1985,7 @@
 
 	<path name="gain-incall_nb-speaker-mic">
 		<ctl name="IN3L Digital Volume" value="136" />
-		<ctl name="IN4L Digital Volume" value="140" />
+		<ctl name="IN4L Digital Volume" value="152" />
 	</path>
 
 	<path name="gain-incall_nb-dual-speaker-mic">
@@ -1970,8 +1993,8 @@
 	</path>
 
 	<path name="gain-incall_nb-dex-speaker-mic">
-		<ctl name="IN3L Digital Volume" value="148" />
-		<ctl name="IN4L Digital Volume" value="140" />
+		<ctl name="IN3L Digital Volume" value="136" />
+		<ctl name="IN4L Digital Volume" value="152" />
 	</path>
 
 	<path name="gain-incall_nb-dex-dual-speaker-mic">
@@ -2002,7 +2025,7 @@
 
 	<path name="gain-incall_wb-speaker-mic">
 		<ctl name="IN3L Digital Volume" value="136" />
-		<ctl name="IN4L Digital Volume" value="140" />
+		<ctl name="IN4L Digital Volume" value="152" />
 	</path>
 
 	<path name="gain-incall_wb-dual-speaker-mic">
@@ -2010,8 +2033,8 @@
 	</path>
 
 	<path name="gain-incall_wb-dex-speaker-mic">
-		<ctl name="IN3L Digital Volume" value="148" />
-		<ctl name="IN4L Digital Volume" value="140" />
+		<ctl name="IN3L Digital Volume" value="136" />
+		<ctl name="IN4L Digital Volume" value="152" />
 	</path>
 
 	<path name="gain-incall_wb-dex-dual-speaker-mic">
@@ -2036,7 +2059,7 @@
 
 	<!-- Loopback Input (no delay) -->
 	<path name="gain-loopback-mic">
-		<ctl name="IN3L Digital Volume" value="140" />
+		<ctl name="IN3L Digital Volume" value="134" />
 	</path>
 
 	<path name="gain-loopback-2nd-mic">
@@ -2168,6 +2191,19 @@
 	<path name="gain-echo_test-dualmic">
 		<ctl name="IN3L Digital Volume" value="145" />
 		<ctl name="IN4L Digital Volume" value="137" />
+	</path>
+
+	<path name="gain-echo_thd_test-mic">
+		<ctl name="IN3L Digital Volume" value="116" />
+	</path>
+
+	<path name="gain-echo_thd_test-2nd-mic">
+		<ctl name="IN4L Digital Volume" value="116" />
+	</path>
+
+	<path name="gain-echo_thd_test-dualmic">
+		<ctl name="IN3L Digital Volume" value="116" />
+		<ctl name="IN4L Digital Volume" value="116" />
 	</path>
 
 	<path name="gain-karaoke-2nd-mic">

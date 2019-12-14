@@ -92,6 +92,7 @@ Only the three quirks included above are recognized at this point:
             <Limit name="block-size" value="16x16" />
             <Limit name="blocks-per-second" min="1" max="489600" />
             <Limit name="bitrate" range="1-80000000" />
+            <Limit name="performance-point-1920x1080" range="120" />
             <Limit name="concurrent-instances" max="16" />
             <Feature name="adaptive-playback" />
         </MediaCodec>
@@ -103,6 +104,7 @@ Only the three quirks included above are recognized at this point:
             <Limit name="block-size" value="16x16" />
             <Limit name="blocks-per-second" min="1" max="48600" />
             <Limit name="bitrate" range="1-80000000" />
+            <Limit name="performance-point-1920x1080" range="120" />
             <Limit name="concurrent-instances" max="16" />
             <Feature name="adaptive-playback" />
         </MediaCodec>
@@ -114,6 +116,7 @@ Only the three quirks included above are recognized at this point:
             <Limit name="block-size" value="16x16" />
             <Limit name="blocks-per-second" min="1" max="3888000" />
             <Limit name="bitrate" range="1-120000000" />
+            <Limit name="performance-point-3840x2160" range="120" />
             <Limit name="concurrent-instances" max="16" />
             <Feature name="adaptive-playback" />
         </MediaCodec>
@@ -125,6 +128,7 @@ Only the three quirks included above are recognized at this point:
             <Limit name="block-size" value="16x16" />
             <Limit name="blocks-per-second" min="1" max="3888000" />
             <Limit name="bitrate" range="1-120000000" />
+            <Limit name="performance-point-3840x2160" range="120" />
             <Limit name="concurrent-instances" max="2" />
             <Feature name="adaptive-playback" />
             <Feature name="secure-playback" required="true" />
@@ -137,6 +141,7 @@ Only the three quirks included above are recognized at this point:
             <Limit name="block-size" value="16x16" />
             <Limit name="blocks-per-second" min="1" max="3888000" />
             <Limit name="bitrate" range="1-80000000" />
+            <Limit name="performance-point-3840x2160" range="120" />
             <Limit name="concurrent-instances" max="16" />
             <Feature name="adaptive-playback" />
         </MediaCodec>
@@ -148,6 +153,7 @@ Only the three quirks included above are recognized at this point:
             <Limit name="block-size" value="16x16" />
             <Limit name="blocks-per-second" min="1" max="3888000" />
             <Limit name="bitrate" range="1-120000000" />
+            <Limit name="performance-point-3840x2160" range="120" />
             <Limit name="concurrent-instances" max="16" />
             <Feature name="adaptive-playback" />
         </MediaCodec>
@@ -159,6 +165,7 @@ Only the three quirks included above are recognized at this point:
             <Limit name="block-size" value="16x16" />
             <Limit name="blocks-per-second" min="1" max="3888000" />
             <Limit name="bitrate" range="1-120000000" />
+            <Limit name="performance-point-3840x2160" range="120" />
             <Limit name="concurrent-instances" max="2" />
             <Feature name="adaptive-playback" />
             <Feature name="secure-playback" required="true" />
@@ -171,6 +178,7 @@ Only the three quirks included above are recognized at this point:
             <Limit name="block-size" value="16x16" />
             <Limit name="blocks-per-second" min="1" max="3888000" />
             <Limit name="bitrate" range="1-80000000" />
+            <Limit name="performance-point-3840x2160" range="120" />
             <Limit name="concurrent-instances" max="16" />
             <Feature name="adaptive-playback" />
         </MediaCodec>
@@ -182,6 +190,7 @@ Only the three quirks included above are recognized at this point:
             <Limit name="block-size" value="16x16" />
             <Limit name="blocks-per-second" min="1" max="3888000" />
             <Limit name="bitrate" range="1-80000000" />
+            <Limit name="performance-point-3840x2160" range="120" />
             <Limit name="concurrent-instances" max="2" />
             <Feature name="adaptive-playback" />
             <Feature name="secure-playback" required="true" />
@@ -210,6 +219,7 @@ Only the three quirks included above are recognized at this point:
             <Limit name="block-size" value="16x16" />
             <Limit name="blocks-per-second" min="1" max="3888000" />
             <Limit name="bitrate" range="1-120000000" />
+            <Limit name="performance-point-3840x2160" range="120" />
             <Limit name="concurrent-instances" max="16" />
         </MediaCodec>
         <MediaCodec name="OMX.Exynos.AVC.Encoder.secure" type="video/avc-wfd" >
@@ -220,6 +230,7 @@ Only the three quirks included above are recognized at this point:
             <Limit name="block-size" value="16x16" />
             <Limit name="blocks-per-second" min="1" max="3888000" />
             <Limit name="bitrate" range="1-120000000" />
+            <Limit name="performance-point-3840x2160" range="120" />
             <Limit name="concurrent-instances" max="2" />
         </MediaCodec>
         <MediaCodec name="OMX.Exynos.H263.Encoder" type="video/3gpp" >
@@ -230,6 +241,7 @@ Only the three quirks included above are recognized at this point:
             <Limit name="block-size" value="16x16" />
             <Limit name="blocks-per-second" min="1" max="979200" />
             <Limit name="bitrate" range="1-80000000" />
+            <Limit name="performance-point-1920x1080" range="120" />
             <Limit name="concurrent-instances" max="16" />
         </MediaCodec>
         <MediaCodec name="OMX.Exynos.MPEG4.Encoder" type="video/mp4v-es" >
@@ -240,6 +252,7 @@ Only the three quirks included above are recognized at this point:
             <Limit name="block-size" value="16x16" />
             <Limit name="blocks-per-second" min="1" max="979200" />
             <Limit name="bitrate" range="1-80000000" />
+            <Limit name="performance-point-1920x1080" range="120" />
             <Limit name="concurrent-instances" max="16" />
         </MediaCodec>
         <MediaCodec name="OMX.Exynos.VP8.Encoder" type="video/x-vnd.on2.vp8" >
@@ -250,6 +263,7 @@ Only the three quirks included above are recognized at this point:
             <Limit name="block-size" value="16x16" />
             <Limit name="blocks-per-second" min="1" max="3888000" />
             <Limit name="bitrate" range="1-80000000" />
+            <Limit name="performance-point-3840x2160" range="120" />
             <Limit name="concurrent-instances" max="16" />
         </MediaCodec>
         <MediaCodec name="OMX.Exynos.HEVC.Encoder" type="video/hevc" >
@@ -260,6 +274,7 @@ Only the three quirks included above are recognized at this point:
             <Limit name="block-size" value="32x32" />
             <Limit name="blocks-per-second" min="1" max="979200" />
             <Limit name="bitrate" range="1-120000000" />
+            <Limit name="performance-point-3840x2160" range="120" />
             <Limit name="concurrent-instances" max="16" />
         </MediaCodec>
         <MediaCodec name="OMX.Exynos.VP9.Encoder" type="video/x-vnd.on2.vp9" >
@@ -270,6 +285,7 @@ Only the three quirks included above are recognized at this point:
             <Limit name="block-size" value="32x32" />
             <Limit name="blocks-per-second" min="1" max="979200" />
             <Limit name="bitrate" range="1-80000000" />
+            <Limit name="performance-point-3840x2160" range="120" />
             <Limit name="concurrent-instances" max="16" />
         </MediaCodec>
         <MediaCodec name="OMX.Exynos.AVC.WFD.Encoder" type="video/avc-wfd" >
@@ -280,6 +296,7 @@ Only the three quirks included above are recognized at this point:
             <Limit name="block-size" value="16x16" />
             <Limit name="blocks-per-second" min="1" max="3888000" />
             <Limit name="bitrate" range="1-120000000" />
+            <Limit name="performance-point-3840x2160" range="120" />
             <Limit name="concurrent-instances" max="1" />
         </MediaCodec>
         <MediaCodec name="OMX.Exynos.AVC.WFD.Encoder.secure" type="video/avc-wfd" >
@@ -290,6 +307,7 @@ Only the three quirks included above are recognized at this point:
             <Limit name="block-size" value="16x16" />
             <Limit name="blocks-per-second" min="1" max="3888000" />
             <Limit name="bitrate" range="1-120000000" />
+            <Limit name="performance-point-3840x2160" range="120" />
             <Limit name="concurrent-instances" max="1" />
         </MediaCodec>
         <MediaCodec name="OMX.Exynos.HEVC.WFD.Encoder" type="video/hevc-wfd" >
@@ -300,6 +318,7 @@ Only the three quirks included above are recognized at this point:
             <Limit name="block-size" value="32x32" />
             <Limit name="blocks-per-second" min="1" max="979200" />
             <Limit name="bitrate" range="1-120000000" />
+            <Limit name="performance-point-3840x2160" range="120" />
             <Limit name="concurrent-instances" max="1" />
         </MediaCodec>
         <MediaCodec name="OMX.Exynos.HEVC.WFD.Encoder.secure" type="video/hevc-wfd" >
@@ -310,6 +329,7 @@ Only the three quirks included above are recognized at this point:
             <Limit name="block-size" value="32x32" />
             <Limit name="blocks-per-second" min="1" max="979200" />
             <Limit name="bitrate" range="1-120000000" />
+            <Limit name="performance-point-3840x2160" range="120" />
             <Limit name="concurrent-instances" max="1" />
         </MediaCodec>
     </Encoders>

@@ -109,6 +109,8 @@
 	<ctl name="ABOX ERAP info DSM On" value="0" />
 	<ctl name="ABOX ERAP info Bypass On" value="0" />
 	<ctl name="ABOX ERAP info USB On" value="0" />
+	<ctl name="ABOX ERAP info FM Radio On" value="0" />
+	<ctl name="ABOX PCM ext VPCMIN ON" value="0" />
 
 	<!-- A-Box Default Configuration for others -->
 	<ctl name="ABOX Audio Mode" value="NORMAL" />
@@ -141,6 +143,9 @@
 	<ctl name="DMIC1 Switch" value="0" />
 	<ctl name="DMIC2 Switch" value="0" />
 	<ctl name="DMIC4 Switch" value="0" />
+
+	<ctl name="HPOUT2 DRE Switch" value="1" />
+	<ctl name="HPOUT2 EDRE Switch" value="1" />
 
 	<!-- EQs Filter setting -->
 	<ctl name="EQ1 Coefficients" value="0 0 15 205 4 3 0 204 14 93 253 229 4 10 55 7 9 220 1 12 4 78 63 93 14 133 249 250 4 10 39 131 4 219 5 55 64 0 0 0" />
@@ -340,11 +345,11 @@
 	</path>
 
 	<path name="dev-speaker2">
-		<ctl name="One Stop Mode" value="Mono Left" />
+		<ctl name="One Stop Mode" value="Stereo Left" />
 	</path>
 
 	<path name="dev-speaker">
-		<ctl name="One Stop Mode" value="Mono Right" />
+		<ctl name="One Stop Mode" value="Stereo Right" />
 	</path>
 
 	<path name="dev-dual-speaker">
@@ -458,6 +463,10 @@
 		<ctl name="ABOX UAIF3 rate" value="16000" />
 	</path>
 
+	<!-- Amp & codec mute control -->
+	<path name="output-mute">
+	</path>
+
 	<!-- Output mixer settings -->
 	<!-- Playback paths -->
 	<path name="media-handset">
@@ -480,7 +489,7 @@
 	</path>
 
 	<path name="media-speaker">
-		<path name="dev-dual-speaker" />
+		<path name="dev-speaker" />
 		<path name="route-sifs0-to-uaif0" />
 		<path name="route-sifs0-to-rsrc0" />
 		<path name="route-rsrc0-to-wdma0" />
@@ -513,7 +522,7 @@
 	</path>
 
 	<path name="media-speaker-headset">
-		<path name="dev-dual-speaker-headset" />
+		<path name="dev-speaker-headset" />
 		<path name="route-sifs0-to-uaif0" />
 		<path name="route-sifs0-to-rsrc0" />
 		<path name="route-rsrc0-to-wdma0" />
@@ -558,7 +567,7 @@
 	</path>
 
 	<path name="media-speaker-bt-sco-headset">
-		<path name="dev-dual-speaker" />
+		<path name="dev-speaker" />
 		<path name="media-bt-sco-headphone" />
 		<path name="route-uaif1-to-nsrc3" />
 		<path name="route-nsrc3-to-wdma4" />
@@ -681,6 +690,8 @@
 		<ctl name="Output Ramp Up" value="8ms/6dB" />
 		<path name="route-sifs0-to-rsrc0" />
 		<path name="route-rsrc0-to-wdma0" />
+		<ctl name="HPOUT2 DRE Switch" value="0" />
+		<ctl name="HPOUT2 EDRE Switch" value="0" />
 		<ctl name="ABOX Speech Param" value="13" />
 		<ctl name="ABOX Speech Update Flag" value="1" />
 	</path>
@@ -690,6 +701,8 @@
 		<ctl name="Output Ramp Up" value="8ms/6dB" />
 		<path name="route-sifs0-to-rsrc0" />
 		<path name="route-rsrc0-to-wdma0" />
+		<ctl name="HPOUT2 DRE Switch" value="0" />
+		<ctl name="HPOUT2 EDRE Switch" value="0" />
 		<ctl name="ABOX Speech Param" value="12" />
 		<ctl name="ABOX Speech Update Flag" value="1" />
 	</path>
@@ -741,6 +754,8 @@
 		<path name="media-headset" />
 		<path name="route-sifs0-to-rsrc0" />
 		<path name="route-rsrc0-to-wdma0" />
+		<ctl name="HPOUT2 DRE Switch" value="0" />
+		<ctl name="HPOUT2 EDRE Switch" value="0" />
 		<ctl name="ABOX Speech Param" value="27" />
 		<ctl name="ABOX Speech Update Flag" value="1" />
 	</path>
@@ -749,6 +764,8 @@
 		<path name="media-headset" />
 		<path name="route-sifs0-to-rsrc0" />
 		<path name="route-rsrc0-to-wdma0" />
+		<ctl name="HPOUT2 DRE Switch" value="0" />
+		<ctl name="HPOUT2 EDRE Switch" value="0" />
 		<ctl name="ABOX Speech Param" value="26" />
 		<ctl name="ABOX Speech Update Flag" value="1" />
 	</path>
@@ -800,6 +817,8 @@
 		<path name="media-headset" />
 		<path name="route-sifs0-to-rsrc0" />
 		<path name="route-rsrc0-to-wdma0" />
+		<ctl name="HPOUT2 DRE Switch" value="0" />
+		<ctl name="HPOUT2 EDRE Switch" value="0" />
 		<ctl name="ABOX Speech Param" value="20" />
 		<ctl name="ABOX Speech Update Flag" value="1" />
 	</path>
@@ -808,6 +827,8 @@
 		<path name="media-headset" />
 		<path name="route-sifs0-to-rsrc0" />
 		<path name="route-rsrc0-to-wdma0" />
+		<ctl name="HPOUT2 DRE Switch" value="0" />
+		<ctl name="HPOUT2 EDRE Switch" value="0" />
 		<ctl name="ABOX Speech Param" value="19" />
 		<ctl name="ABOX Speech Update Flag" value="1" />
 	</path>
@@ -859,6 +880,8 @@
 		<path name="media-headset" />
 		<path name="route-sifs0-to-rsrc0" />
 		<path name="route-rsrc0-to-wdma0" />
+		<ctl name="HPOUT2 DRE Switch" value="0" />
+		<ctl name="HPOUT2 EDRE Switch" value="0" />
 		<ctl name="ABOX Speech Param" value="13" />
 		<ctl name="ABOX Speech Update Flag" value="1" />
 	</path>
@@ -867,6 +890,8 @@
 		<path name="media-headset" />
 		<path name="route-sifs0-to-rsrc0" />
 		<path name="route-rsrc0-to-wdma0" />
+		<ctl name="HPOUT2 DRE Switch" value="0" />
+		<ctl name="HPOUT2 EDRE Switch" value="0" />
 		<ctl name="ABOX Speech Param" value="12" />
 		<ctl name="ABOX Speech Update Flag" value="1" />
 	</path>
@@ -899,7 +924,7 @@
 
 	<path name="wificall_nb-dual-speaker">
 		<path name="media-dual-speaker" />
-		<ctl name="ABOX Speech Param" value="50" />
+		<ctl name="ABOX Speech Param" value="99" />
 		<ctl name="ABOX Speech Update Flag" value="1" />
 	</path>
 
@@ -911,7 +936,7 @@
 
 	<path name="wificall_nb-dex-dual-speaker">
 		<path name="media-dual-speaker" />
-		<ctl name="ABOX Speech Param" value="52" />
+		<ctl name="ABOX Speech Param" value="101" />
 		<ctl name="ABOX Speech Update Flag" value="1" />
 	</path>
 
@@ -919,16 +944,22 @@
 		<path name="media-headset" />
 		<path name="route-sifs0-to-rsrc0" />
 		<path name="route-rsrc0-to-wdma0" />
+		<ctl name="HPOUT2 DRE Switch" value="0" />
+		<ctl name="HPOUT2 EDRE Switch" value="0" />
 		<ctl name="ABOX Speech Param" value="55" />
 		<ctl name="ABOX Speech Update Flag" value="1" />
+		<ctl name="Output Ramp Up" value="8ms/6dB" />
 	</path>
 
 	<path name="wificall_nb-headphone">
 		<path name="media-headset" />
 		<path name="route-sifs0-to-rsrc0" />
 		<path name="route-rsrc0-to-wdma0" />
+		<ctl name="HPOUT2 DRE Switch" value="0" />
+		<ctl name="HPOUT2 EDRE Switch" value="0" />
 		<ctl name="ABOX Speech Param" value="54" />
 		<ctl name="ABOX Speech Update Flag" value="1" />
+		<ctl name="Output Ramp Up" value="8ms/6dB" />
 	</path>
 
 	<path name="wificall_nb-bt-sco-headset">
@@ -958,7 +989,7 @@
 
 	<path name="wificall_wb-dual-speaker">
 		<path name="media-dual-speaker" />
-		<ctl name="ABOX Speech Param" value="60" />
+		<ctl name="ABOX Speech Param" value="102" />
 		<ctl name="ABOX Speech Update Flag" value="1" />
 	</path>
 
@@ -970,7 +1001,7 @@
 
 	<path name="wificall_wb-dex-dual-speaker">
 		<path name="media-dual-speaker" />
-		<ctl name="ABOX Speech Param" value="62" />
+		<ctl name="ABOX Speech Param" value="104" />
 		<ctl name="ABOX Speech Update Flag" value="1" />
 	</path>
 
@@ -978,16 +1009,22 @@
 		<path name="media-headset" />
 		<path name="route-sifs0-to-rsrc0" />
 		<path name="route-rsrc0-to-wdma0" />
+		<ctl name="HPOUT2 DRE Switch" value="0" />
+		<ctl name="HPOUT2 EDRE Switch" value="0" />
 		<ctl name="ABOX Speech Param" value="65" />
 		<ctl name="ABOX Speech Update Flag" value="1" />
+		<ctl name="Output Ramp Up" value="8ms/6dB" />
 	</path>
 
 	<path name="wificall_wb-headphone">
 		<path name="media-headset" />
 		<path name="route-sifs0-to-rsrc0" />
 		<path name="route-rsrc0-to-wdma0" />
+		<ctl name="HPOUT2 DRE Switch" value="0" />
+		<ctl name="HPOUT2 EDRE Switch" value="0" />
 		<ctl name="ABOX Speech Param" value="64" />
 		<ctl name="ABOX Speech Update Flag" value="1" />
+		<ctl name="Output Ramp Up" value="8ms/6dB" />
 	</path>
 
 	<path name="wificall_wb-bt-sco-headset">
@@ -1017,7 +1054,7 @@
 
 	<path name="wificall_evs-dual-speaker">
 		<path name="media-dual-speaker" />
-		<ctl name="ABOX Speech Param" value="70" />
+		<ctl name="ABOX Speech Param" value="105" />
 		<ctl name="ABOX Speech Update Flag" value="1" />
 	</path>
 
@@ -1029,7 +1066,7 @@
 
 	<path name="wificall_evs-dex-dual-speaker">
 		<path name="media-dual-speaker" />
-		<ctl name="ABOX Speech Param" value="72" />
+		<ctl name="ABOX Speech Param" value="107" />
 		<ctl name="ABOX Speech Update Flag" value="1" />
 	</path>
 
@@ -1037,16 +1074,22 @@
 		<path name="media-headset" />
 		<path name="route-sifs0-to-rsrc0" />
 		<path name="route-rsrc0-to-wdma0" />
+		<ctl name="HPOUT2 DRE Switch" value="0" />
+		<ctl name="HPOUT2 EDRE Switch" value="0" />
 		<ctl name="ABOX Speech Param" value="75" />
 		<ctl name="ABOX Speech Update Flag" value="1" />
+		<ctl name="Output Ramp Up" value="8ms/6dB" />
 	</path>
 
 	<path name="wificall_evs-headphone">
 		<path name="media-headset" />
 		<path name="route-sifs0-to-rsrc0" />
 		<path name="route-rsrc0-to-wdma0" />
+		<ctl name="HPOUT2 DRE Switch" value="0" />
+		<ctl name="HPOUT2 EDRE Switch" value="0" />
 		<ctl name="ABOX Speech Param" value="74" />
 		<ctl name="ABOX Speech Update Flag" value="1" />
+		<ctl name="Output Ramp Up" value="8ms/6dB" />
 	</path>
 
 	<path name="wificall_evs-bt-sco-headset">
@@ -1096,6 +1139,8 @@
 		<path name="media-headset" />
 		<path name="route-sifs0-to-rsrc0" />
 		<path name="route-rsrc0-to-wdma0" />
+		<ctl name="HPOUT2 DRE Switch" value="0" />
+		<ctl name="HPOUT2 EDRE Switch" value="0" />
 		<ctl name="ABOX Speech Param" value="36" />
 		<ctl name="ABOX Speech Update Flag" value="1" />
 	</path>
@@ -1104,6 +1149,8 @@
 		<path name="media-headset" />
 		<path name="route-sifs0-to-rsrc0" />
 		<path name="route-rsrc0-to-wdma0" />
+		<ctl name="HPOUT2 DRE Switch" value="0" />
+		<ctl name="HPOUT2 EDRE Switch" value="0" />
 		<ctl name="ABOX Speech Param" value="35" />
 		<ctl name="ABOX Speech Update Flag" value="1" />
 	</path>
@@ -1225,7 +1272,10 @@
 		<path name="route-sifs0-to-rsrc0" />
 		<path name="route-rsrc0-to-wdma0" />
 		<path name="dev-headset" />
+		<ctl name="HPOUT2 DRE Switch" value="0" />
+		<ctl name="HPOUT2 EDRE Switch" value="0" />
 		<ctl name="ABOX Sound Type" value="HEADSET" />
+		<ctl name="Output Ramp Up" value="8ms/6dB" />
 	</path>
 
 	<path name="incall_nb-headphone">
@@ -1745,7 +1795,7 @@
 
 	<path name="interview-mic">
 		<path name="recording-dualmic" />
-		<ctl name="ABOX OEM FM Mode" value="3" />
+		<ctl name="ABOX OEM NXP Mode" value="3" />
 	</path>
 
 	<path name="meeting-mic">
@@ -1812,7 +1862,7 @@
 		<path name="dev-dual-invert-mic" />
 		<ctl name="ABOX OEM AP Call BW" value="0x020201" />
 		<ctl name="ABOX OEM Bargein type" value="2" />
-		<ctl name="ABOX OEM FM Mode" value="2" />
+		<ctl name="ABOX OEM NXP Mode" value="2" />
 	</path>
 
 	<path name="bargein_samsung_engine-headset-mic">
@@ -1882,7 +1932,7 @@
 		<path name="dev-dual-mic" />
 		<ctl name="ABOX OEM AP Call BW" value="0x000201" />
 		<ctl name="ABOX OEM AP Call type" value="9" />
-		<ctl name="ABOX OEM FM Mode" value="1" />
+		<ctl name="ABOX OEM NXP Mode" value="1" />
 	</path>
 
 	<path name="communication-speaker-mic">
@@ -1890,7 +1940,7 @@
 		<path name="dev-dual-invert-mic" />
 		<ctl name="ABOX OEM AP Call BW" value="0x020201" />
 		<ctl name="ABOX OEM AP Call type" value="10" />
-		<ctl name="ABOX OEM FM Mode" value="1" />
+		<ctl name="ABOX OEM NXP Mode" value="1" />
 	</path>
 
 	<path name="communication-dual-speaker-mic">
@@ -1901,7 +1951,7 @@
 		<path name="media-2nd-mic" />
 		<ctl name="ABOX OEM AP Call BW" value="0x020101" />
 		<ctl name="ABOX OEM AP Call type" value="11" />
-		<ctl name="ABOX OEM FM Mode" value="1" />
+		<ctl name="ABOX OEM NXP Mode" value="1" />
 	</path>
 
 	<path name="communication-dex-dual-speaker-mic">
@@ -1912,35 +1962,35 @@
 		<path name="media-headset-mic" />
 		<ctl name="ABOX OEM AP Call BW" value="0x010101" />
 		<ctl name="ABOX OEM AP Call type" value="13" />
-		<ctl name="ABOX OEM FM Mode" value="1" />
+		<ctl name="ABOX OEM NXP Mode" value="1" />
 	</path>
 
 	<path name="communication-headphone-mic">
 		<path name="media-mic" />
 		<ctl name="ABOX OEM AP Call BW" value="0x000101" />
 		<ctl name="ABOX OEM AP Call type" value="12" />
-		<ctl name="ABOX OEM FM Mode" value="1" />
+		<ctl name="ABOX OEM NXP Mode" value="1" />
 	</path>
 
 	<path name="communication-bt-sco-headset-in">
 		<path name="media-bt-sco-headset-in" />
 		<ctl name="ABOX OEM AP Call BW" value="0x030101" />
 		<ctl name="ABOX OEM AP Call type" value="8" />
-		<ctl name="ABOX OEM FM Mode" value="1" />
+		<ctl name="ABOX OEM NXP Mode" value="1" />
 	</path>
 
 	<path name="communication-bt-sco-nrec-headset-in">
 		<path name="media-bt-sco-headset-in" />
 		<ctl name="ABOX OEM AP Call BW" value="0x030101" />
 		<ctl name="ABOX OEM AP Call type" value="7" />
-		<ctl name="ABOX OEM FM Mode" value="1" />
+		<ctl name="ABOX OEM NXP Mode" value="1" />
 	</path>
 
 	<path name="communication-usb-headset-mic">
 		<path name="apcall-usb-headset-mic" />
 		<ctl name="ABOX OEM AP Call BW" value="0x010101" />
 		<ctl name="ABOX OEM AP Call type" value="111" />
-		<ctl name="ABOX OEM FM Mode" value="1" />
+		<ctl name="ABOX OEM NXP Mode" value="1" />
 	</path>
 
 	<!-- samsung voip input -->
@@ -1949,7 +1999,7 @@
 		<path name="dev-dual-mic" />
 		<ctl name="ABOX OEM AP Call BW" value="0x000201" />
 		<ctl name="ABOX OEM AP Call type" value="23" />
-		<ctl name="ABOX OEM FM Mode" value="1" />
+		<ctl name="ABOX OEM NXP Mode" value="1" />
 	</path>
 
 	<path name="samsung_voip-speaker-mic">
@@ -1957,7 +2007,7 @@
 		<path name="dev-dual-invert-mic" />
 		<ctl name="ABOX OEM AP Call BW" value="0x020201" />
 		<ctl name="ABOX OEM AP Call type" value="24" />
-		<ctl name="ABOX OEM FM Mode" value="1" />
+		<ctl name="ABOX OEM NXP Mode" value="1" />
 	</path>
 
 	<path name="samsung_voip-dual-speaker-mic">
@@ -1968,7 +2018,7 @@
 		<path name="media-2nd-mic" />
 		<ctl name="ABOX OEM AP Call BW" value="0x020101" />
 		<ctl name="ABOX OEM AP Call type" value="25" />
-		<ctl name="ABOX OEM FM Mode" value="1" />
+		<ctl name="ABOX OEM NXP Mode" value="1" />
 	</path>
 
 	<path name="samsung_voip-dex-dual-speaker-mic">
@@ -1979,7 +2029,7 @@
 		<path name="media-headset-mic" />
 		<ctl name="ABOX OEM AP Call BW" value="0x010101" />
 		<ctl name="ABOX OEM AP Call type" value="27" />
-		<ctl name="ABOX OEM FM Mode" value="1" />
+		<ctl name="ABOX OEM NXP Mode" value="1" />
 	</path>
 
 	<path name="samsung_voip-headphone-mic">
@@ -1987,28 +2037,28 @@
 		<path name="dev-dual-mic" />
 		<ctl name="ABOX OEM AP Call BW" value="0x000201" />
 		<ctl name="ABOX OEM AP Call type" value="26" />
-		<ctl name="ABOX OEM FM Mode" value="1" />
+		<ctl name="ABOX OEM NXP Mode" value="1" />
 	</path>
 
 	<path name="samsung_voip-bt-sco-headset-in">
 		<path name="media-bt-sco-headset-in" />
 		<ctl name="ABOX OEM AP Call BW" value="0x030101" />
 		<ctl name="ABOX OEM AP Call type" value="22" />
-		<ctl name="ABOX OEM FM Mode" value="1" />
+		<ctl name="ABOX OEM NXP Mode" value="1" />
 	</path>
 
 	<path name="samsung_voip-bt-sco-nrec-headset-in">
 		<path name="media-bt-sco-headset-in" />
 		<ctl name="ABOX OEM AP Call BW" value="0x030101" />
 		<ctl name="ABOX OEM AP Call type" value="21" />
-		<ctl name="ABOX OEM FM Mode" value="1" />
+		<ctl name="ABOX OEM NXP Mode" value="1" />
 	</path>
 
 	<path name="samsung_voip-usb-headset-mic">
 		<path name="apcall-usb-headset-mic" />
 		<ctl name="ABOX OEM AP Call BW" value="0x010101" />
 		<ctl name="ABOX OEM AP Call type" value="115" />
-		<ctl name="ABOX OEM FM Mode" value="1" />
+		<ctl name="ABOX OEM NXP Mode" value="1" />
 	</path>
 
 	<!-- samsung voip fmc input -->
@@ -2017,7 +2067,7 @@
 		<path name="dev-dual-mic" />
 		<ctl name="ABOX OEM AP Call BW" value="0x000201" />
 		<ctl name="ABOX OEM AP Call type" value="16" />
-		<ctl name="ABOX OEM FM Mode" value="1" />
+		<ctl name="ABOX OEM NXP Mode" value="1" />
 	</path>
 
 	<path name="samsung_voip_fmc-speaker-mic">
@@ -2025,7 +2075,7 @@
 		<path name="dev-dual-invert-mic" />
 		<ctl name="ABOX OEM AP Call BW" value="0x020201" />
 		<ctl name="ABOX OEM AP Call type" value="17" />
-		<ctl name="ABOX OEM FM Mode" value="1" />
+		<ctl name="ABOX OEM NXP Mode" value="1" />
 	</path>
 
 	<path name="samsung_voip_fmc-dual-speaker-mic">
@@ -2036,7 +2086,7 @@
 		<path name="media-2nd-mic" />
 		<ctl name="ABOX OEM AP Call BW" value="0x020101" />
 		<ctl name="ABOX OEM AP Call type" value="18" />
-		<ctl name="ABOX OEM FM Mode" value="1" />
+		<ctl name="ABOX OEM NXP Mode" value="1" />
 	</path>
 
 	<path name="samsung_voip_fmc-dex-dual-speaker-mic">
@@ -2047,7 +2097,7 @@
 		<path name="media-headset-mic" />
 		<ctl name="ABOX OEM AP Call BW" value="0x010101" />
 		<ctl name="ABOX OEM AP Call type" value="20" />
-		<ctl name="ABOX OEM FM Mode" value="1" />
+		<ctl name="ABOX OEM NXP Mode" value="1" />
 	</path>
 
 	<path name="samsung_voip_fmc-headphone-mic">
@@ -2055,28 +2105,28 @@
 		<path name="dev-dual-mic" />
 		<ctl name="ABOX OEM AP Call BW" value="0x000201" />
 		<ctl name="ABOX OEM AP Call type" value="19" />
-		<ctl name="ABOX OEM FM Mode" value="1" />
+		<ctl name="ABOX OEM NXP Mode" value="1" />
 	</path>
 
 	<path name="samsung_voip_fmc-bt-sco-headset-in">
 		<path name="media-bt-sco-headset-in" />
 		<ctl name="ABOX OEM AP Call BW" value="0x030101" />
 		<ctl name="ABOX OEM AP Call type" value="15" />
-		<ctl name="ABOX OEM FM Mode" value="1" />
+		<ctl name="ABOX OEM NXP Mode" value="1" />
 	</path>
 
 	<path name="samsung_voip_fmc-bt-sco-nrec-headset-in">
 		<path name="media-bt-sco-headset-in" />
 		<ctl name="ABOX OEM AP Call BW" value="0x030101" />
 		<ctl name="ABOX OEM AP Call type" value="14" />
-		<ctl name="ABOX OEM FM Mode" value="1" />
+		<ctl name="ABOX OEM NXP Mode" value="1" />
 	</path>
 
 	<path name="samsung_voip_fmc-usb-headset-mic">
 		<path name="apcall-usb-headset-mic" />
 		<ctl name="ABOX OEM AP Call BW" value="0x010101" />
 		<ctl name="ABOX OEM AP Call type" value="113" />
-		<ctl name="ABOX OEM FM Mode" value="1" />
+		<ctl name="ABOX OEM NXP Mode" value="1" />
 	</path>
 
 	<!-- voip input -->
@@ -2085,7 +2135,7 @@
 		<path name="dev-dual-mic" />
 		<ctl name="ABOX OEM AP Call BW" value="0x000201" />
 		<ctl name="ABOX OEM AP Call type" value="9" />
-		<ctl name="ABOX OEM FM Mode" value="1" />
+		<ctl name="ABOX OEM NXP Mode" value="1" />
 	</path>
 
 	<path name="voip-speaker-mic">
@@ -2093,7 +2143,7 @@
 		<path name="dev-dual-invert-mic" />
 		<ctl name="ABOX OEM AP Call BW" value="0x020201" />
 		<ctl name="ABOX OEM AP Call type" value="10" />
-		<ctl name="ABOX OEM FM Mode" value="1" />
+		<ctl name="ABOX OEM NXP Mode" value="1" />
 	</path>
 
 	<path name="voip-dual-speaker-mic">
@@ -2104,7 +2154,7 @@
 		<path name="media-2nd-mic" />
 		<ctl name="ABOX OEM AP Call BW" value="0x020101" />
 		<ctl name="ABOX OEM AP Call type" value="11" />
-		<ctl name="ABOX OEM FM Mode" value="1" />
+		<ctl name="ABOX OEM NXP Mode" value="1" />
 	</path>
 
 	<path name="voip-dex-dual-speaker-mic">
@@ -2115,35 +2165,35 @@
 		<path name="media-headset-mic" />
 		<ctl name="ABOX OEM AP Call BW" value="0x010101" />
 		<ctl name="ABOX OEM AP Call type" value="13" />
-		<ctl name="ABOX OEM FM Mode" value="1" />
+		<ctl name="ABOX OEM NXP Mode" value="1" />
 	</path>
 
 	<path name="voip-headphone-mic">
 		<path name="media-mic" />
 		<ctl name="ABOX OEM AP Call BW" value="0x000101" />
 		<ctl name="ABOX OEM AP Call type" value="12" />
-		<ctl name="ABOX OEM FM Mode" value="1" />
+		<ctl name="ABOX OEM NXP Mode" value="1" />
 	</path>
 
 	<path name="voip-bt-sco-headset-in">
 		<path name="media-bt-sco-headset-in" />
 		<ctl name="ABOX OEM AP Call BW" value="0x030101" />
 		<ctl name="ABOX OEM AP Call type" value="8" />
-		<ctl name="ABOX OEM FM Mode" value="1" />
+		<ctl name="ABOX OEM NXP Mode" value="1" />
 	</path>
 
 	<path name="voip-bt-sco-nrec-headset-in">
 		<path name="media-bt-sco-headset-in" />
 		<ctl name="ABOX OEM AP Call BW" value="0x030101" />
 		<ctl name="ABOX OEM AP Call type" value="7" />
-		<ctl name="ABOX OEM FM Mode" value="1" />
+		<ctl name="ABOX OEM NXP Mode" value="1" />
 	</path>
 
 	<path name="voip-usb-headset-mic">
 		<path name="apcall-usb-headset-mic" />
 		<ctl name="ABOX OEM AP Call BW" value="0x010101" />
 		<ctl name="ABOX OEM AP Call type" value="111" />
-		<ctl name="ABOX OEM FM Mode" value="1" />
+		<ctl name="ABOX OEM NXP Mode" value="1" />
 	</path>
 
 	<!-- wificall input -->
@@ -2153,7 +2203,7 @@
 		<path name="dev-dual-mic" />
 		<ctl name="ABOX OEM AP Call BW" value="0x000200" />
 		<ctl name="ABOX OEM AP Call type" value="48" />
-		<ctl name="ABOX OEM FM Mode" value="1" />
+		<ctl name="ABOX OEM NXP Mode" value="1" />
 	</path>
 
 	<path name="wificall_nb-speaker-mic">
@@ -2161,29 +2211,36 @@
 		<path name="dev-dual-invert-mic" />
 		<ctl name="ABOX OEM AP Call BW" value="0x020200" />
 		<ctl name="ABOX OEM AP Call type" value="50" />
-		<ctl name="ABOX OEM FM Mode" value="1" />
+		<ctl name="ABOX OEM NXP Mode" value="1" />
 	</path>
 
 	<path name="wificall_nb-dual-speaker-mic">
-		<path name="wificall_nb-speaker-mic" />
+		<path name="route-ap-record" />
+		<path name="dev-dual-invert-mic" />
+		<ctl name="ABOX OEM AP Call BW" value="0x020200" />
+		<ctl name="ABOX OEM AP Call type" value="99" />
+		<ctl name="ABOX OEM NXP Mode" value="1" />
 	</path>
 
 	<path name="wificall_nb-dex-speaker-mic">
 		<path name="media-2nd-mic" />
 		<ctl name="ABOX OEM AP Call BW" value="0x020100" />
 		<ctl name="ABOX OEM AP Call type" value="52" />
-		<ctl name="ABOX OEM FM Mode" value="1" />
+		<ctl name="ABOX OEM NXP Mode" value="1" />
 	</path>
 
 	<path name="wificall_nb-dex-dual-speaker-mic">
-		<path name="wificall_nb-dex-speaker-mic" />
+		<path name="media-2nd-mic" />
+		<ctl name="ABOX OEM AP Call BW" value="0x020100" />
+		<ctl name="ABOX OEM AP Call type" value="101" />
+		<ctl name="ABOX OEM NXP Mode" value="1" />
 	</path>
 
 	<path name="wificall_nb-headset-mic">
 		<path name="media-headset-mic" />
 		<ctl name="ABOX OEM AP Call BW" value="0x010100" />
 		<ctl name="ABOX OEM AP Call type" value="55" />
-		<ctl name="ABOX OEM FM Mode" value="1" />
+		<ctl name="ABOX OEM NXP Mode" value="1" />
 	</path>
 
 	<path name="wificall_nb-headphone-mic">
@@ -2191,28 +2248,28 @@
 		<path name="dev-dual-mic" />
 		<ctl name="ABOX OEM AP Call BW" value="0x000200" />
 		<ctl name="ABOX OEM AP Call type" value="54" />
-		<ctl name="ABOX OEM FM Mode" value="1" />
+		<ctl name="ABOX OEM NXP Mode" value="1" />
 	</path>
 
 	<path name="wificall_nb-bt-sco-headset-in">
 		<path name="media-bt-sco-headset-in" />
 		<ctl name="ABOX OEM AP Call BW" value="0x030100" />
 		<ctl name="ABOX OEM AP Call type" value="46" />
-		<ctl name="ABOX OEM FM Mode" value="1" />
+		<ctl name="ABOX OEM NXP Mode" value="1" />
 	</path>
 
 	<path name="wificall_nb-bt-sco-nrec-headset-in">
 		<path name="media-bt-sco-headset-in" />
 		<ctl name="ABOX OEM AP Call BW" value="0x030100" />
 		<ctl name="ABOX OEM AP Call type" value="47" />
-		<ctl name="ABOX OEM FM Mode" value="1" />
+		<ctl name="ABOX OEM NXP Mode" value="1" />
 	</path>
 
 	<path name="wificall_nb-usb-headset-mic">
 		<path name="apcall-usb-headset-mic" />
 		<ctl name="ABOX OEM AP Call BW" value="0x010101" />
 		<ctl name="ABOX OEM AP Call type" value="121" />
-		<ctl name="ABOX OEM FM Mode" value="1" />
+		<ctl name="ABOX OEM NXP Mode" value="1" />
 	</path>
 
 	<!-- wificall AP WB -->
@@ -2221,7 +2278,7 @@
 		<path name="dev-dual-mic" />
 		<ctl name="ABOX OEM AP Call BW" value="0x000201" />
 		<ctl name="ABOX OEM AP Call type" value="58" />
-		<ctl name="ABOX OEM FM Mode" value="1" />
+		<ctl name="ABOX OEM NXP Mode" value="1" />
 	</path>
 
 	<path name="wificall_wb-speaker-mic">
@@ -2229,29 +2286,36 @@
 		<path name="dev-dual-invert-mic" />
 		<ctl name="ABOX OEM AP Call BW" value="0x020201" />
 		<ctl name="ABOX OEM AP Call type" value="60" />
-		<ctl name="ABOX OEM FM Mode" value="1" />
+		<ctl name="ABOX OEM NXP Mode" value="1" />
 	</path>
 
 	<path name="wificall_wb-dual-speaker-mic">
-		<path name="wificall_wb-speaker-mic" />
+		<path name="route-ap-record" />
+		<path name="dev-dual-invert-mic" />
+		<ctl name="ABOX OEM AP Call BW" value="0x020201" />
+		<ctl name="ABOX OEM AP Call type" value="102" />
+		<ctl name="ABOX OEM NXP Mode" value="1" />
 	</path>
 
 	<path name="wificall_wb-dex-speaker-mic">
 		<path name="media-2nd-mic" />
 		<ctl name="ABOX OEM AP Call BW" value="0x020101" />
 		<ctl name="ABOX OEM AP Call type" value="62" />
-		<ctl name="ABOX OEM FM Mode" value="1" />
+		<ctl name="ABOX OEM NXP Mode" value="1" />
 	</path>
 
 	<path name="wificall_wb-dex-dual-speaker-mic">
-		<path name="wificall_wb-dex-speaker-mic" />
+		<path name="media-2nd-mic" />
+		<ctl name="ABOX OEM AP Call BW" value="0x020101" />
+		<ctl name="ABOX OEM AP Call type" value="104" />
+		<ctl name="ABOX OEM NXP Mode" value="1" />
 	</path>
 
 	<path name="wificall_wb-headset-mic">
 		<path name="media-headset-mic" />
 		<ctl name="ABOX OEM AP Call BW" value="0x010101" />
 		<ctl name="ABOX OEM AP Call type" value="65" />
-		<ctl name="ABOX OEM FM Mode" value="1" />
+		<ctl name="ABOX OEM NXP Mode" value="1" />
 	</path>
 
 	<path name="wificall_wb-headphone-mic">
@@ -2259,28 +2323,28 @@
 		<path name="dev-dual-mic" />
 		<ctl name="ABOX OEM AP Call BW" value="0x000201" />
 		<ctl name="ABOX OEM AP Call type" value="64" />
-		<ctl name="ABOX OEM FM Mode" value="1" />
+		<ctl name="ABOX OEM NXP Mode" value="1" />
 	</path>
 
 	<path name="wificall_wb-bt-sco-headset-in">
 		<path name="media-bt-sco-headset-in" />
 		<ctl name="ABOX OEM AP Call BW" value="0x030101" />
 		<ctl name="ABOX OEM AP Call type" value="56" />
-		<ctl name="ABOX OEM FM Mode" value="1" />
+		<ctl name="ABOX OEM NXP Mode" value="1" />
 	</path>
 
 	<path name="wificall_wb-bt-sco-nrec-headset-in">
 		<path name="media-bt-sco-headset-in" />
 		<ctl name="ABOX OEM AP Call BW" value="0x030101" />
 		<ctl name="ABOX OEM AP Call type" value="57" />
-		<ctl name="ABOX OEM FM Mode" value="1" />
+		<ctl name="ABOX OEM NXP Mode" value="1" />
 	</path>
 
 	<path name="wificall_wb-usb-headset-mic">
 		<path name="apcall-usb-headset-mic" />
 		<ctl name="ABOX OEM AP Call BW" value="0x010101" />
 		<ctl name="ABOX OEM AP Call type" value="123" />
-		<ctl name="ABOX OEM FM Mode" value="1" />
+		<ctl name="ABOX OEM NXP Mode" value="1" />
 	</path>
 
 	<!-- wificall AP EVS -->
@@ -2289,7 +2353,7 @@
 		<path name="dev-dual-mic" />
 		<ctl name="ABOX OEM AP Call BW" value="0x000202" />
 		<ctl name="ABOX OEM AP Call type" value="68" />
-		<ctl name="ABOX OEM FM Mode" value="1" />
+		<ctl name="ABOX OEM NXP Mode" value="1" />
 	</path>
 
 	<path name="wificall_evs-speaker-mic">
@@ -2297,29 +2361,36 @@
 		<path name="dev-dual-invert-mic" />
 		<ctl name="ABOX OEM AP Call BW" value="0x020202" />
 		<ctl name="ABOX OEM AP Call type" value="70" />
-		<ctl name="ABOX OEM FM Mode" value="1" />
+		<ctl name="ABOX OEM NXP Mode" value="1" />
 	</path>
 
 	<path name="wificall_evs-dual-speaker-mic">
-		<path name="wificall_evs-speaker-mic" />
+		<path name="route-ap-record" />
+		<path name="dev-dual-invert-mic" />
+		<ctl name="ABOX OEM AP Call BW" value="0x020202" />
+		<ctl name="ABOX OEM AP Call type" value="105" />
+		<ctl name="ABOX OEM NXP Mode" value="1" />
 	</path>
 
 	<path name="wificall_evs-dex-speaker-mic">
 		<path name="media-2nd-mic" />
 		<ctl name="ABOX OEM AP Call BW" value="0x020102" />
 		<ctl name="ABOX OEM AP Call type" value="72" />
-		<ctl name="ABOX OEM FM Mode" value="1" />
+		<ctl name="ABOX OEM NXP Mode" value="1" />
 	</path>
 
 	<path name="wificall_evs-dex-dual-speaker-mic">
-		<path name="wificall_evs-dex-speaker-mic" />
+		<path name="media-2nd-mic" />
+		<ctl name="ABOX OEM AP Call BW" value="0x020102" />
+		<ctl name="ABOX OEM AP Call type" value="107" />
+		<ctl name="ABOX OEM NXP Mode" value="1" />
 	</path>
 
 	<path name="wificall_evs-headset-mic">
 		<path name="media-headset-mic" />
 		<ctl name="ABOX OEM AP Call BW" value="0x010102" />
 		<ctl name="ABOX OEM AP Call type" value="75" />
-		<ctl name="ABOX OEM FM Mode" value="1" />
+		<ctl name="ABOX OEM NXP Mode" value="1" />
 	</path>
 
 	<path name="wificall_evs-headphone-mic">
@@ -2327,28 +2398,28 @@
 		<path name="dev-dual-mic" />
 		<ctl name="ABOX OEM AP Call BW" value="0x000202" />
 		<ctl name="ABOX OEM AP Call type" value="74" />
-		<ctl name="ABOX OEM FM Mode" value="1" />
+		<ctl name="ABOX OEM NXP Mode" value="1" />
 	</path>
 
 	<path name="wificall_evs-bt-sco-headset-in">
 		<path name="media-bt-sco-headset-in" />
 		<ctl name="ABOX OEM AP Call BW" value="0x030102" />
 		<ctl name="ABOX OEM AP Call type" value="66" />
-		<ctl name="ABOX OEM FM Mode" value="1" />
+		<ctl name="ABOX OEM NXP Mode" value="1" />
 	</path>
 
 	<path name="wificall_evs-bt-sco-nrec-headset-in">
 		<path name="media-bt-sco-headset-in" />
 		<ctl name="ABOX OEM AP Call BW" value="0x030102" />
 		<ctl name="ABOX OEM AP Call type" value="67" />
-		<ctl name="ABOX OEM FM Mode" value="1" />
+		<ctl name="ABOX OEM NXP Mode" value="1" />
 	</path>
 
 	<path name="wificall_evs-usb-headset-mic">
 		<path name="apcall-usb-headset-mic" />
 		<ctl name="ABOX OEM AP Call BW" value="0x010101" />
 		<ctl name="ABOX OEM AP Call type" value="125" />
-		<ctl name="ABOX OEM FM Mode" value="1" />
+		<ctl name="ABOX OEM NXP Mode" value="1" />
 	</path>
 
 	<!-- Video call input -->
@@ -2357,7 +2428,7 @@
 		<path name="dev-dual-mic" />
 		<ctl name="ABOX OEM AP Call BW" value="0x000200" />
 		<ctl name="ABOX OEM AP Call type" value="30" />
-		<ctl name="ABOX OEM FM Mode" value="1" />
+		<ctl name="ABOX OEM NXP Mode" value="1" />
 	</path>
 
 	<path name="video_call-speaker-mic">
@@ -2365,7 +2436,7 @@
 		<path name="dev-dual-invert-mic" />
 		<ctl name="ABOX OEM AP Call BW" value="0x020200" />
 		<ctl name="ABOX OEM AP Call type" value="31" />
-		<ctl name="ABOX OEM FM Mode" value="1" />
+		<ctl name="ABOX OEM NXP Mode" value="1" />
 	</path>
 
 	<path name="video_call-dual-speaker-mic">
@@ -2376,7 +2447,7 @@
 		<path name="media-2nd-mic" />
 		<ctl name="ABOX OEM AP Call BW" value="0x020100" />
 		<ctl name="ABOX OEM AP Call type" value="33" />
-		<ctl name="ABOX OEM FM Mode" value="1" />
+		<ctl name="ABOX OEM NXP Mode" value="1" />
 	</path>
 
 	<path name="video_call-dex-dual-speaker-mic">
@@ -2387,7 +2458,7 @@
 		<path name="media-headset-mic" />
 		<ctl name="ABOX OEM AP Call BW" value="0x010100" />
 		<ctl name="ABOX OEM AP Call type" value="36" />
-		<ctl name="ABOX OEM FM Mode" value="1" />
+		<ctl name="ABOX OEM NXP Mode" value="1" />
 	</path>
 
 	<path name="video_call-headphone-mic">
@@ -2395,28 +2466,28 @@
 		<path name="dev-dual-mic" />
 		<ctl name="ABOX OEM AP Call BW" value="0x000200" />
 		<ctl name="ABOX OEM AP Call type" value="35" />
-		<ctl name="ABOX OEM FM Mode" value="1" />
+		<ctl name="ABOX OEM NXP Mode" value="1" />
 	</path>
 
 	<path name="video_call-bt-sco-headset-in">
 		<path name="media-bt-sco-headset-in" />
 		<ctl name="ABOX OEM AP Call BW" value="0x030100" />
 		<ctl name="ABOX OEM AP Call type" value="28" />
-		<ctl name="ABOX OEM FM Mode" value="1" />
+		<ctl name="ABOX OEM NXP Mode" value="1" />
 	</path>
 
 	<path name="video_call-bt-sco-nrec-headset-in">
 		<path name="media-bt-sco-headset-in" />
 		<ctl name="ABOX OEM AP Call BW" value="0x030100" />
 		<ctl name="ABOX OEM AP Call type" value="29" />
-		<ctl name="ABOX OEM FM Mode" value="1" />
+		<ctl name="ABOX OEM NXP Mode" value="1" />
 	</path>
 
 	<path name="video_call-usb-headset-mic">
 		<path name="apcall-usb-headset-mic" />
 		<ctl name="ABOX OEM AP Call BW" value="0x010101" />
 		<ctl name="ABOX OEM AP Call type" value="117" />
-		<ctl name="ABOX OEM FM Mode" value="1" />
+		<ctl name="ABOX OEM NXP Mode" value="1" />
 	</path>
 
 	<!-- VoiceCall paths -->
@@ -2608,12 +2679,8 @@
 
 	<path name="volte_cp_evs-handset-mic">
 		<path name="route-cp-tx" />
-		<ctl name="EQ1 Input 1" value="IN3L" />
-		<ctl name="LHPF1 Input 1" value="EQ1" />
-		<ctl name="EQ2 Input 1" value="IN4L" />
-		<ctl name="LHPF2 Input 1" value="EQ2" />
-		<ctl name="ASRC1IN1L Input 1" value="LHPF1" />
-		<ctl name="ASRC1IN1R Input 1" value="LHPF2" />
+		<ctl name="ASRC1IN1L Input 1" value="IN3L" />
+		<ctl name="ASRC1IN1R Input 1" value="IN4L" />
 		<ctl name="AIF1TX1 Input 1" value="ASRC1IN1L" />
 		<ctl name="AIF1TX2 Input 1" value="ASRC1IN1R" />
 		<ctl name="DMIC1 Switch" value="1" />
@@ -2622,12 +2689,8 @@
 
 	<path name="volte_cp_evs-speaker-mic">
 		<path name="route-cp-tx" />
-		<ctl name="EQ3 Input 1" value="IN3L" />
-		<ctl name="LHPF1 Input 1" value="EQ3" />
-		<ctl name="EQ4 Input 1" value="IN4L" />
-		<ctl name="LHPF2 Input 1" value="EQ4" />
-		<ctl name="ASRC1IN1L Input 1" value="LHPF2" />
-		<ctl name="ASRC1IN1R Input 1" value="LHPF1" />
+		<ctl name="ASRC1IN1L Input 1" value="IN4L" />
+		<ctl name="ASRC1IN1R Input 1" value="IN3L" />
 		<ctl name="AIF1TX1 Input 1" value="ASRC1IN1L" />
 		<ctl name="AIF1TX2 Input 1" value="ASRC1IN1R" />
 		<ctl name="DMIC1 Switch" value="1" />
@@ -2640,12 +2703,8 @@
 
 	<path name="volte_cp_evs-dex-speaker-mic">
 		<path name="route-cp-tx" />
-		<ctl name="EQ3 Input 1" value="IN4L" />
-		<ctl name="LHPF1 Input 1" value="EQ3" />
-		<ctl name="EQ4 Input 1" value="IN4L" />
-		<ctl name="LHPF2 Input 1" value="EQ4" />
-		<ctl name="ASRC1IN1L Input 1" value="LHPF2" />
-		<ctl name="ASRC1IN1R Input 1" value="LHPF1" />
+		<ctl name="ASRC1IN1L Input 1" value="IN4L" />
+		<ctl name="ASRC1IN1R Input 1" value="IN4L" />
 		<ctl name="AIF1TX1 Input 1" value="ASRC1IN1L" />
 		<ctl name="AIF1TX2 Input 1" value="ASRC1IN1R" />
 		<ctl name="DMIC1 Switch" value="1" />
@@ -2662,12 +2721,8 @@
 
 	<path name="volte_cp_evs-headphone-mic">
 		<path name="route-cp-tx" />
-		<ctl name="EQ1 Input 1" value="IN3L" />
-		<ctl name="LHPF1 Input 1" value="EQ1" />
-		<ctl name="EQ2 Input 1" value="IN4L" />
-		<ctl name="LHPF2 Input 1" value="EQ2" />
-		<ctl name="ASRC1IN1L Input 1" value="LHPF1" />
-		<ctl name="ASRC1IN1R Input 1" value="LHPF2" />
+		<ctl name="ASRC1IN1L Input 1" value="IN3L" />
+		<ctl name="ASRC1IN1R Input 1" value="IN4L" />
 		<ctl name="AIF1TX1 Input 1" value="ASRC1IN1L" />
 		<ctl name="AIF1TX2 Input 1" value="ASRC1IN1R" />
 		<ctl name="DMIC1 Switch" value="1" />
@@ -2958,6 +3013,22 @@
 		<path name="media-dual-speaker" />
 	</path>
 
+	<path name="echo_thd_test-handset">
+		<path name="media-handset" />
+	</path>
+
+	<path name="echo_thd_test-speaker">
+		<path name="media-speaker" />
+	</path>
+
+	<path name="echo_thd_test-speaker2">
+		<path name="media-speaker2" />
+	</path>
+
+	<path name="echo_thd_test-dual-speaker">
+		<path name="media-dual-speaker" />
+	</path>
+
 	<!-- Input -->
 	<!-- Loopback Input (no delay) -->
 	<path name="loopback-mic">
@@ -3030,6 +3101,21 @@
 	</path>
 
 	<path name="echo_test-dualmic">
+		<path name="route-ap-record" />
+		<path name="dev-dual-mic" />
+	</path>
+
+	<path name="echo_thd_test-mic">
+		<path name="route-ap-record" />
+		<path name="dev-main-mic" />
+	</path>
+
+	<path name="echo_thd_test-2nd-mic">
+		<path name="route-ap-record" />
+		<path name="dev-2nd-mic" />
+	</path>
+
+	<path name="echo_thd_test-dualmic">
 		<path name="route-ap-record" />
 		<path name="dev-dual-mic" />
 	</path>
