@@ -110,20 +110,17 @@ PRODUCT_PACKAGES += \
     android.hardware.audio@2.0-impl \
     android.hardware.audio@2.0-service \
     android.hardware.audio@5.0-impl \
-    android.hardware.audio.common@2.0-util \
-    android.hardware.audio.common-util \
     android.hardware.audio.common@5.0 \
     android.hardware.audio.common@5.0-util \
     android.hardware.audio.effect@2.0-impl \
     android.hardware.audio.effect@5.0 \
     android.hardware.audio.effect@5.0-impl \
     android.hardware.soundtrigger@2.0-impl \
-    #audio.a2dp.default \
-    #audio.usb.default \
-    #audio.r_submix.default \
-    #audio.primary.default \
-    #libtinycompress 
-    #libshim_audio
+    audio.a2dp.default \
+    audio.usb.default \
+    audio.r_submix.default \
+    audio.primary.default \
+    libtinycompress 
 
 #PRODUCT_PACKAGES += \
     #audio.primary.universal9810_32
