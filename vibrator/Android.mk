@@ -6,7 +6,7 @@ LOCAL_PATH := $(call my-dir)
 include $(CLEAR_VARS)
 
 LOCAL_MODULE_RELATIVE_PATH := hw
-LOCAL_VENDOR_MODULE := true
+#LOCAL_VENDOR_MODULE := true
 LOCAL_MODULE_TAGS := optional
 
 LOCAL_MODULE := android.hardware.vibrator@1.0-service.9810
