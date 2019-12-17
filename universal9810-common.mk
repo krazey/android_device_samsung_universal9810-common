@@ -290,6 +290,7 @@ PRODUCT_PACKAGES += \
 
 # Fingerprint
 PRODUCT_PACKAGES += \
+	android.hardware.biometrics.fingerprint@2.1 \
     fingerprint.exynos5
 
 # Vibrator
