@@ -9,7 +9,7 @@ def FullOTA_InstallEnd(info):
     info.script.AppendExtra('run_program("/sbin/ln", "-s", "/vendor/lib/egl/libGLES_mali.so", "/vendor/lib/libOpenCL.so");');
     info.script.AppendExtra('run_program("/sbin/ln", "-s", "/vendor/lib/egl/libGLES_mali.so", "/vendor/lib/libOpenCL.so.1");');
     info.script.AppendExtra('run_program("/sbin/ln", "-s", "/vendor/lib/egl/libGLES_mali.so", "/vendor/lib/libOpenCL.so.1.1");');
-    info.script.AppendExtra('run_program("/sbin/ln", "-s", "/vendor/lib64/egl/libGLES_mali.so", "/vendor/lib64/hw/vulkan.universal9810.so")';);
+    info.script.AppendExtra('run_program("/sbin/ln", "-s", "/vendor/lib64/egl/libGLES_mali.so", "/vendor/lib64/hw/vulkan.universal9810.so");');
     info.script.AppendExtra('run_program("/sbin/ln", "-s", "/vendor/lib64/egl/libGLES_mali.so", "/vendor/lib64/libOpenCL.so");');
     info.script.AppendExtra('run_program("/sbin/ln", "-s", "/vendor/lib64/egl/libGLES_mali.so", "/vendor/lib64/libOpenCL.so.1");');
     info.script.AppendExtra('run_program("/sbin/ln", "-s", "/vendor/lib64/egl/libGLES_mali.so", "/vendor/lib64/libOpenCL.so.1.1");');
