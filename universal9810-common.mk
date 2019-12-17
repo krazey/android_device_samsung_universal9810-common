@@ -256,6 +256,8 @@ PRODUCT_PACKAGES += \
 
 # GPS
 PRODUCT_PACKAGES += \
+	android.hardware.gnss@2.0 \
+	android.hardware.gnss@2.0-impl \
     android.hardware.gnss@1.1-impl
 
 # NFC
