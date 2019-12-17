@@ -97,4 +97,5 @@ PRODUCT_PROPERTY_OVERRIDES += \
     ro.gfx.driver.0=com.samsung.gpudriver.N9MaliG72_90 \
     ro.hardware.egl=mali \
     ro.zygote.disable_gl_preload=true \
-    ro.config.vc_call_vol_steps=5
+    ro.config.vc_call_vol_steps=5 \
+    ro.build.version.release=10
