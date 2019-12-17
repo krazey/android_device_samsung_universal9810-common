@@ -43,12 +43,72 @@ on init
     chown system system /efs/sec_efs/ssp_data
     chmod 0644 /efs/sec_efs/ssp_data
 
+# Accelerometer_sensor
+    chown system radio /sys/class/sensors/accelerometer_sensor/raw_data
+    chown system radio /sys/class/sensors/accelerometer_sensor/calibration
+    chown system radio /sys/class/sensors/accelerometer_sensor/reactive_alert
+    chown system radio /sys/class/sensors/accelerometer_sensor/vendor
+    chown system radio /sys/class/sensors/accelerometer_sensor/name
+    chown system radio /sys/class/sensors/accelerometer_sensor/selftest
+    chown system radio /sys/class/sensors/accelerometer_sensor/lowpassfilter
+    chown system radio /sys/class/sensors/accelerometer_sensor/dhr_sensor_info
+
+# Proximity_sensor
+    chown system radio /sys/class/sensors/proximity_sensor/raw_data
+    chown system radio /sys/class/sensors/proximity_sensor/prox_avg
+    chown system radio /sys/class/sensors/proximity_sensor/vendor
+    chown system radio /sys/class/sensors/proximity_sensor/name
+    chown system radio /sys/class/sensors/proximity_sensor/thresh_high
+    chown system radio /sys/class/sensors/proximity_sensor/thresh_low
+    chown system radio /sys/class/sensors/proximity_sensor/thresh_detect_high
+    chown system radio /sys/class/sensors/proximity_sensor/thresh_detect_low
+    chown system radio /sys/class/sensors/proximity_sensor/barcode_emul_en
+    chown system radio /sys/class/sensors/proximity_sensor/prox_offset_pass
+    chown system radio /sys/class/sensors/proximity_sensor/prox_trim
+    chown system radio /sys/class/sensors/proximity_sensor/prox_probe
+    chown system radio /sys/class/sensors/proximity_sensor/prox_alert_thresh
+    chown system radio /sys/class/sensors/proximity_sensor/dhr_sensor_info
+
+# Light_sensor
+    chown system radio /sys/class/sensors/light_sensor/lux
+    chown system radio /sys/class/sensors/light_sensor/raw_data
+    chown system radio /sys/class/sensors/light_sensor/vendor
+    chown system radio /sys/class/sensors/light_sensor/name
+    chown system radio /sys/class/sensors/light_sensor/coef
+
 # Hidden_hole
     chown system radio /sys/class/sensors/hidden_hole/hh_is_exist_efs
     chown system radio /sys/class/sensors/hidden_hole/hh_ver
     chown system radio /sys/class/sensors/hidden_hole/hh_write_all_data
     chown system radio /sys/class/sensors/hidden_hole/hh_check_coef
     chown system radio /sys/class/sensors/hidden_hole/hh_ext_prox_th
+
+# Gyro_sensor
+    chown system radio /sys/class/sensors/gyro_sensor/power_on
+    chown system radio /sys/class/sensors/gyro_sensor/power_off
+    chown system media /sys/class/sensors/gyro_sensor/temperature
+    chown system radio /sys/class/sensors/gyro_sensor/selftest
+    chown system radio /sys/class/sensors/gyro_sensor/selftest_dps
+    chown system radio /sys/class/sensors/gyro_sensor/vendor
+    chown system radio /sys/class/sensors/gyro_sensor/name
+    chown system radio /sys/class/sensors/gyro_sensor/selftest_revised
+
+# Barometer_sensor
+    chown system radio /sys/class/sensors/barometer_sensor/sea_level_pressure
+    chown system radio /sys/class/sensors/barometer_sensor/vendor
+    chown system radio /sys/class/sensors/barometer_sensor/name
+    chown system radio /sys/class/sensors/barometer_sensor/calibration
+    chown system radio /sys/class/sensors/barometer_sensor/temperature
+
+# Magnetic_sensor
+    chown system radio /sys/class/sensors/magnetic_sensor/selftest
+    chown system radio /sys/class/sensors/magnetic_sensor/raw_data
+    chown system radio /sys/class/sensors/magnetic_sensor/vendor
+    chown system radio /sys/class/sensors/magnetic_sensor/name
+    chown system radio /sys/class/sensors/magnetic_sensor/dhr_sensor_info
+    chown system radio /sys/class/sensors/magnetic_sensor/selftest
+    chown system radio /sys/class/sensors/magnetic_sensor/adc
+    chown system radio /sys/class/sensors/magnetic_sensor/status
 
 # HRM_sensor
     chown system radio /sys/class/sensors/hrm_sensor/name
@@ -93,6 +153,46 @@ on init
     chown system radio /sys/class/sensors/grip_sensor/body_threshold
     chown system radio /sys/class/sensors/grip_sensor/grip_flush
     chown system radio /sys/class/sensors/grip_sensor/irq_count
+
+# SensorHub
+    chown system radio /sys/class/sensors/ssp_sensor/enable
+    chown system radio /sys/class/sensors/ssp_sensor/mcu_rev
+    chown system radio /sys/class/sensors/ssp_sensor/mcu_name
+    chown system radio /sys/class/sensors/ssp_sensor/mcu_test
+    chown system radio /sys/class/sensors/ssp_sensor/mcu_reset
+    chown system radio /sys/class/sensors/ssp_sensor/mcu_update
+    chown system radio /sys/class/sensors/ssp_sensor/mcu_sleep_test
+    chown system radio /sys/class/sensors/ssp_sensor/ori_poll_delay
+    chown system radio /sys/class/sensors/ssp_sensor/thermistor_channel_0
+    chown system radio /sys/class/sensors/ssp_sensor/thermistor_channel_1
+    chown system radio /sys/class/sensors/ssp_sensor/bcm_minidump
+    chown system radio /sys/class/sensors/ssp_sensor/reset_info
+    chown root system /sys/class/sec/sensorhub/mcu_power
+
+# Sensorhub IIO
+    chown system radio /sys/class/sensors/ssp_sensor/accel_poll_delay
+    chown system radio /sys/class/sensors/ssp_sensor/rot_poll_delay
+    chown system radio /sys/class/sensors/ssp_sensor/game_rot_poll_delay
+    chown system radio /sys/class/sensors/ssp_sensor/step_det_poll_delay
+    chown system radio /sys/class/sensors/ssp_sensor/gyro_poll_delay
+    chown system radio /sys/class/sensors/ssp_sensor/uncalib_gyro_poll_delay
+    chown system radio /sys/class/sensors/ssp_sensor/mag_poll_delay
+    chown system radio /sys/class/sensors/ssp_sensor/uncal_mag_poll_delay
+    chown system radio /sys/class/sensors/ssp_sensor/light_poll_delay
+    chown system radio /sys/class/sensors/ssp_sensor/light_flicker_poll_delay
+    chown system radio /sys/class/sensors/ssp_sensor/light_ir_poll_delay
+    chown system radio /sys/class/sensors/ssp_sensor/prox_alert_poll_delay
+    chown system radio /sys/class/sensors/ssp_sensor/pressure_poll_delay
+    chown system radio /sys/class/sensors/ssp_sensor/tilt_poll_delay
+    chown system radio /sys/class/sensors/ssp_sensor/pickup_poll_delay
+    chown system radio /sys/class/sensors/ssp_sensor/prox_poll_delay
+    chown system radio /sys/class/sensors/ssp_sensor/sig_motion_poll_delay
+    chown system radio /sys/class/sensors/ssp_sensor/step_cnt_poll_delay
+    chown system radio /sys/class/sensors/ssp_sensor/uncal_gyro_poll_delay
+    chown system radio /sys/class/sensors/ssp_sensor/interrupt_gyro_poll_delay
+    chown system radio /sys/class/sensors/ssp_sensor/ssp_flush
+    chown system radio /sys/class/sensors/ssp_sensor/sensor_state
+    chown system radio /sys/class/sensors/ssp_sensor/sensor_dump
 
  # MOBEAM
     chown system radio /sys/class/sec/sec_barcode_emul/vendor
@@ -599,86 +699,86 @@ on fs
     chown system system /sys/class/ion_cma/ion_video_ext/isolated
 
 # Permissions for backlight
-	chown system system /sys/class/backlight/panel/brightness
-	chown system system /sys/class/backlight/panel/weakness_ccb
+    chown system system /sys/class/backlight/panel/brightness
+    chown system system /sys/class/backlight/panel/weakness_ccb
 
 # Permissions for LCD HMT
-	chown system system /sys/class/lcd/panel/hmt_on
-	chown system system /sys/class/lcd/panel/hmt_bright
-	chown system system /sys/class/mdnie/mdnie/hmt_color_temperature
+    chown system system /sys/class/lcd/panel/hmt_on
+    chown system system /sys/class/lcd/panel/hmt_bright
+    chown system system /sys/class/mdnie/mdnie/hmt_color_temperature
 
 # Permissions for LCD ALPM
-	chown system system /sys/class/lcd/panel/alpm
+    chown system system /sys/class/lcd/panel/alpm
 
 # Permissions for LCD
-	chown system radio /sys/class/lcd/panel/manufacture_code
-	chown system radio /sys/class/lcd/panel/lcd_type
-	chown system system /sys/class/lcd/panel/siop_enable
-	chown system system /sys/class/lcd/panel/temperature
-	chown system radio /sys/class/lcd/panel/mcd_mode
-	chown system system /sys/class/lcd/panel/lux
-	chown system media_rw /sys/class/lcd/panel/adaptive_control
-	chown system system /sys/class/lcd/panel/SVC_OCTA
-	chown system system /sys/class/lcd/panel/xtalk_mode
-	chown system system /sys/class/lcd/panel/mst
-	chown system system /sys/class/lcd/panel/poc
-	chown system system /sys/class/lcd/panel/poc_mca
-	chown system system /sys/class/lcd/panel/gct
-	chown system system /sys/class/lcd/panel/grayspot
-	chown system system /sys/class/lcd/panel/irc_mode
-	chown system system /sys/class/lcd/panel/isc_defect
+    chown system radio /sys/class/lcd/panel/manufacture_code
+    chown system radio /sys/class/lcd/panel/lcd_type
+    chown system system /sys/class/lcd/panel/siop_enable
+    chown system system /sys/class/lcd/panel/temperature
+    chown system radio /sys/class/lcd/panel/mcd_mode
+    chown system system /sys/class/lcd/panel/lux
+    chown system media_rw /sys/class/lcd/panel/adaptive_control
+    chown system system /sys/class/lcd/panel/SVC_OCTA
+    chown system system /sys/class/lcd/panel/xtalk_mode
+    chown system system /sys/class/lcd/panel/mst
+    chown system system /sys/class/lcd/panel/poc
+    chown system system /sys/class/lcd/panel/poc_mca
+    chown system system /sys/class/lcd/panel/gct
+    chown system system /sys/class/lcd/panel/grayspot
+    chown system system /sys/class/lcd/panel/irc_mode
+    chown system system /sys/class/lcd/panel/isc_defect
 
 # Permissions for LCD COPR
-	chown system system /sys/class/lcd/panel/copr
-	chown system system /sys/class/lcd/panel/read_copr
+    chown system system /sys/class/lcd/panel/copr
+    chown system system /sys/class/lcd/panel/read_copr
 
 # Permissions for AFC
-	chown system system /sys/class/lcd/panel/copr_roi
-	chown system system /sys/class/lcd/panel/brt_avg
-	chown system system /sys/class/mdnie/mdnie/afc
+    chown system system /sys/class/lcd/panel/copr_roi
+    chown system system /sys/class/lcd/panel/brt_avg
+    chown system system /sys/class/mdnie/mdnie/afc
 
-	mkdir /efs/afc 0700 system system
-	chmod 700 /efs/afc
+    mkdir /efs/afc 0700 system system
+    chmod 700 /efs/afc
 
 # Permissions for LCD SELF MASK
-	chown system system /sys/class/lcd/panel/self_mask
+    chown system system /sys/class/lcd/panel/self_mask
 
 # Permissions for LCD SELF MOVE
-	chown system system /sys/class/lcd/panel/self_move
+    chown system system /sys/class/lcd/panel/self_move
 
 # Permissions for LCD DPUI
-	chown system system /sys/class/lcd/panel/dpui
-	chown system system /sys/class/lcd/panel/dpui_dbg
-	chown system system /sys/class/lcd/panel/dpci
-	chown system system /sys/class/lcd/panel/dpci_dbg
+    chown system system /sys/class/lcd/panel/dpui
+    chown system system /sys/class/lcd/panel/dpui_dbg
+    chown system system /sys/class/lcd/panel/dpci
+    chown system system /sys/class/lcd/panel/dpci_dbg
 
 # Permissions for PANEL POC
-	chmod 0660 /dev/poc
-	chown system system /dev/poc
+    chmod 0660 /dev/poc
+    chown system system /dev/poc
 
 # Permissions for self_display
-	chmod 0660 /dev/self_display
-	chown system system /dev/self_display
+    chmod 0660 /dev/self_display
+    chown system system /dev/self_display
 
 # permissions for BCDS systrace
-	chmod 0666 /sys/class/lcd/panel/fingerprint
-	chown system media_rw /sys/class/lcd/panel/fingerprint
+    chmod 0666 /sys/class/lcd/panel/fingerprint
+    chown system media_rw /sys/class/lcd/panel/fingerprint
 
 # Permissions for MDNIE
-	chown system media_rw /sys/class/mdnie/mdnie/bypass
-	chown system media_rw /sys/class/mdnie/mdnie/mode
-	chown system media_rw /sys/class/mdnie/mdnie/scenario
-	chown system system /sys/class/mdnie/mdnie/accessibility
-	chown system system /sys/class/mdnie/mdnie/sensorRGB
-	chown system system /sys/class/mdnie/mdnie/mdnie_ldu
-	chown system system /sys/class/mdnie/mdnie/hdr
-	chown system system /sys/module/hdr_tunables/parameters/tm_override_enable
-	chown system system /sys/module/hdr_tunables/parameters/tm_lut_x
-	chown system system /sys/module/hdr_tunables/parameters/tm_lut_y
-	chown system system /sys/class/mdnie/mdnie/night_mode
-	chown system system /sys/class/mdnie/mdnie/color_lens
-	chown system system /sys/class/mdnie/mdnie/whiteRGB
-	chown system system /sys/class/mdnie/mdnie/light_notification
+    chown system media_rw /sys/class/mdnie/mdnie/bypass
+    chown system media_rw /sys/class/mdnie/mdnie/mode
+    chown system media_rw /sys/class/mdnie/mdnie/scenario
+    chown system system /sys/class/mdnie/mdnie/accessibility
+    chown system system /sys/class/mdnie/mdnie/sensorRGB
+    chown system system /sys/class/mdnie/mdnie/mdnie_ldu
+    chown system system /sys/class/mdnie/mdnie/hdr
+    chown system system /sys/module/hdr_tunables/parameters/tm_override_enable
+    chown system system /sys/module/hdr_tunables/parameters/tm_lut_x
+    chown system system /sys/module/hdr_tunables/parameters/tm_lut_y
+    chown system system /sys/class/mdnie/mdnie/night_mode
+    chown system system /sys/class/mdnie/mdnie/color_lens
+    chown system system /sys/class/mdnie/mdnie/whiteRGB
+    chown system system /sys/class/mdnie/mdnie/light_notification
 
 # Permissions for System LSI NFC
 # NFC : Permissions for NFC
