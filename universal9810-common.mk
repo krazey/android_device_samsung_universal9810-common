@@ -151,7 +151,7 @@ PRODUCT_PACKAGES += \
 
 # Camera
 PRODUCT_PACKAGES += \
-    Snap
+    Camera2
 
 PRODUCT_PACKAGES += \
     android.hardware.camera.common@1.0 \
