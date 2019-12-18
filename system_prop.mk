@@ -98,4 +98,5 @@ PRODUCT_PROPERTY_OVERRIDES += \
     ro.hardware.egl=mali \
     ro.zygote.disable_gl_preload=true \
     ro.config.vc_call_vol_steps=5 \
-    ro.build.version.release=10
+    ro.build.version.release=10 \
+    ro.control_privapp_permissions=disable
