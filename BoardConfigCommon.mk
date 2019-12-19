@@ -124,6 +124,10 @@ TARGET_USES_HWC2 := true
 NUM_FRAMEBUFFER_SURFACE_BUFFERS := 3
 OVERRIDE_RS_DRIVER := libRSDriverArm.so
 
+TARGET_LD_SHIM_LIBS := \
+	/vendor/lib/libbauthserver.so|/vendor/lib/libbauthtzcommon_shim.so \
+	/vendor/lib64/libbauthserver.so|/vendor/lib64/libbauthtzcommon_shim.so
+
 # DEX Pre-optimization
 ifeq ($(HOST_OS),linux)
   ifneq ($(TARGET_BUILD_VARIANT),eng)

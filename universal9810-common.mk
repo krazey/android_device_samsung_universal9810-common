@@ -291,7 +291,8 @@ PRODUCT_PACKAGES += \
 # Fingerprint
 PRODUCT_PACKAGES += \
 	android.hardware.biometrics.fingerprint@2.1 \
-    fingerprint.exynos5
+    	fingerprint.exynos5 \
+	libbauthtzcommon_shim
 
 # Vibrator
 PRODUCT_PACKAGES += \
