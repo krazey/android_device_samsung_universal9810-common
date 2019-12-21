@@ -294,6 +294,11 @@ PRODUCT_PACKAGES += \
     	fingerprint.exynos5 \
 	libbauthtzcommon_shim
 
+# OpenMAX-shims
+PRODUCT_PACKAGES += \
+    libui_shim \
+    libExynosOMX_shim
+
 # Vibrator
 PRODUCT_PACKAGES += \
     android.hardware.vibrator@1.0-service.9810 \
