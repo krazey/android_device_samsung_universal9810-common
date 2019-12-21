@@ -256,14 +256,14 @@ PRODUCT_PACKAGES += \
 
 # GPS
 PRODUCT_PACKAGES += \
-	android.hardware.gnss@2.0 \
-	android.hardware.gnss@2.0-impl \
+    android.hardware.gnss@2.0 \
+    android.hardware.gnss@2.0-impl \
     android.hardware.gnss@1.1-impl
 
 # NFC
 PRODUCT_PACKAGES += \
-	android.hardware.nfc@1.0-service \
-	android.hardware.nfc@1.1-impl \
+    android.hardware.nfc@1.0-service \
+    android.hardware.nfc@1.1-impl \
     android.hardware.nfc@1.0-impl \
     com.android.nfc_extras \
     libnfc-nci \
@@ -284,15 +284,15 @@ PRODUCT_PACKAGES += \
 
 # Sensors
 PRODUCT_PACKAGES += \
-	android.hardware.sensors@1.0 \
-	android.hardware.sensors@1.0-impl \
+    android.hardware.sensors@1.0 \
+    android.hardware.sensors@1.0-impl \
     android.hardware.sensors@1.0-service
 
 # Fingerprint
 PRODUCT_PACKAGES += \
-	android.hardware.biometrics.fingerprint@2.1 \
-    	fingerprint.exynos5 \
-	libbauthtzcommon_shim
+    android.hardware.biometrics.fingerprint@2.1 \
+    fingerprint.exynos5 \
+    libbauthtzcommon_shim
 
 # OpenMAX-shims
 PRODUCT_PACKAGES += \
