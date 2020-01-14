@@ -1,0 +1,9 @@
+allow hal_bluetooth_default efs_file:dir search;
+allow hal_bluetooth_default efs_file:file read;
+allow hal_bluetooth_default efs_file:file open;
+allow hal_bluetooth_default device:chr_file { ioctl open read write };
+allow hal_bluetooth_default sysfs:file write;
+allow hal_bluetooth_default system_prop:property_service set;
+allow hal_bluetooth_default vendor_data_file:file read;
+allow hal_bluetooth_default vendor_default_prop:property_service set;
+
