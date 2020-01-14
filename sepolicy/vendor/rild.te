@@ -12,4 +12,5 @@ allow rild vendor_data_file:dir { add_name open read remove_name write };
 allow rild vendor_data_file:file { create getattr ioctl lock open read unlink write };
 allow rild vendor_default_prop:property_service set;
 allow rild unlabeled:dir search;
+allow rild hal_audio_default:dir search;
 
