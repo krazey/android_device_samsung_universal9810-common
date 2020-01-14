@@ -1,0 +1,2 @@
+#============= migrate_legacy_obb_data ==============
+allow migrate_legacy_obb_data vendor_file:file { getattr read };

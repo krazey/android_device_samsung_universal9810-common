@@ -1,0 +1,4 @@
+#============= hal_wifi_supplicant_default ==============
+allow hal_wifi_supplicant_default default_android_hwservice:hwservice_manager add;
+allow hal_wifi_supplicant_default debugfs_trace_marker:file getattr;
+allow hal_wifi_supplicant_default unlabeled:dir search;

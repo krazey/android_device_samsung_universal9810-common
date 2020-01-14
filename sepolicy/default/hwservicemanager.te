@@ -1,0 +1,5 @@
+#============= hwservicemanager ==============
+allow hwservicemanager init:binder call;
+allow hwservicemanager init:binder transfer;
+allow hwservicemanager runtime_event_log_tags_file:file getattr;
+allow hwservicemanager vendor_file:file { getattr read };

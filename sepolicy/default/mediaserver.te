@@ -1,0 +1,3 @@
+#============= mediaserver ==============
+allow mediaserver vendor_file:file { getattr read };
+allow mediaserver debugfs_trace_marker:file getattr;

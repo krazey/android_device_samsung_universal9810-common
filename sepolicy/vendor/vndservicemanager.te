@@ -1,0 +1,4 @@
+#============= vndservicemanager ==============
+allow vndservicemanager init:unix_stream_socket connectto;
+allow vndservicemanager property_socket:sock_file write;
+allow vndservicemanager vendor_default_prop:property_service set;

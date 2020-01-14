@@ -1,0 +1,4 @@
+#============= installd ==============
+allow installd vendor_file:file { getattr read };
+allow installd cgroup:file getattr;
+allow installd debugfs_trace_marker:file getattr;

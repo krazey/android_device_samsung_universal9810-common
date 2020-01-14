@@ -1,0 +1,3 @@
+#============= hal_memtrack_default ==============
+allow hal_memtrack_default debugfs:dir { open read };
+allow hal_memtrack_default debugfs:file { getattr open read };

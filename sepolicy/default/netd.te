@@ -1,0 +1,5 @@
+#============= netd ==============
+allow netd kernel:system module_request;
+allow netd self:capability sys_module;
+allow netd vendor_file:file { getattr read };
+allow netd debugfs_trace_marker:file getattr;

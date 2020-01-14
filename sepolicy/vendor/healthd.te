@@ -1,0 +1,3 @@
+#============= healthd ==============
+allow healthd sysfs:file { getattr open read };
+allow healthd vendor_file:file { getattr read };

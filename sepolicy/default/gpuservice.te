@@ -1,0 +1,3 @@
+#============= gpuservice ==============
+allow gpuservice vendor_file:file { getattr read };
+allow gpuservice debugfs_trace_marker:file getattr;

@@ -1,0 +1,3 @@
+#============= audioserver ==============
+allow audioserver vendor_file:file { getattr read };
+allow audioserver debugfs_trace_marker:file getattr;

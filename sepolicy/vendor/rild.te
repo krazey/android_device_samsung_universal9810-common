@@ -1,0 +1,15 @@
+#============= rild ==============
+allow rild block_device:blk_file { open read };
+allow rild block_device:dir search;
+allow rild default_android_hwservice:hwservice_manager add;
+allow rild device:chr_file { getattr ioctl open read write };
+allow rild init:dir search;
+allow rild init:file { getattr open read };
+allow rild proc_net:file write;
+allow rild system_data_file:dir { add_name write };
+allow rild system_data_file:file { create open read write };
+allow rild vendor_data_file:dir { add_name open read remove_name write };
+allow rild vendor_data_file:file { create getattr ioctl lock open read unlink write };
+allow rild vendor_default_prop:property_service set;
+allow rild unlabeled:dir search;
+

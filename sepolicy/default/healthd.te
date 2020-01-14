@@ -1,0 +1,4 @@
+#============= healthd ==============
+allow healthd sysfs:file { getattr open read };
+allow healthd vendor_file:file { getattr read };
+allow healthd debugfs_trace_marker:file getattr;

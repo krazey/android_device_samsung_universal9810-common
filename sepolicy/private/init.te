@@ -1,0 +1,3 @@
+#============= init ==============
+allow init system_suspend:binder call;
+allow init system_suspend_hwservice:hwservice_manager find;

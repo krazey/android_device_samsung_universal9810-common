@@ -1,0 +1,3 @@
+#============= apexd ==============
+allow apexd vendor_file:file { getattr read };
+allow apexd cgroup:file getattr;

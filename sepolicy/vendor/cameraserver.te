@@ -1,0 +1,3 @@
+#============= cameraserver ==============
+allow cameraserver init:binder { call transfer };
+allow cameraserver vendor_file:file { getattr read };
