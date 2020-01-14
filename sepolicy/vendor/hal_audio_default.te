@@ -2,3 +2,5 @@
 allow hal_audio_default device:chr_file { open read write };
 allow hal_audio_default efs_file:dir search;
 allow hal_audio_default rild:unix_stream_socket connectto;
+allow hal_audio_default efs_file:file read;
+allow hal_audio_default efs_file:file open;
