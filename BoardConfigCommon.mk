@@ -59,7 +59,11 @@ BOARD_ROOT_EXTRA_FOLDERS := efs
 BOARD_ROOT_EXTRA_SYMLINKS += /dev/block/platform/11120000.ufs/by-name/PERSISTENT:/dev/block/persistent
 
 # SELinux
-BOARD_SEPOLICY_DIRS := $(COMMON_PATH)/sepolicy
+BOARD_PLAT_PUBLIC_SEPOLICY_DIR += $(COMMON_PATH)/sepolicy/public
+BOARD_PLAT_PRIVATE_SEPOLICY_DIR += $(COMMON_PATH)/sepolicy/private
+
+BOARD_SEPOLICY_DIRS += $(COMMON_PATH)/sepolicy/vendor
+SELINUX_IGNORE_NEVERALLOWS := true
 
 # Extended Filesystem Support
 TARGET_EXFAT_DRIVER := sdfat
