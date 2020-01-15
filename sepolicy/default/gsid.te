@@ -1,2 +1,0 @@
-#============= gsid ==============
-allow gsid vendor_file:file read;

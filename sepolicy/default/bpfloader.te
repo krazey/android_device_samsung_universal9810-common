@@ -1,2 +1,0 @@
-#============= bpfloader ==============
-allow bpfloader vendor_file:file read;

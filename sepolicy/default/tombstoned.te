@@ -1,2 +1,0 @@
-#============= tombstoned ==============
-allow tombstoned vendor_file:file { getattr read };

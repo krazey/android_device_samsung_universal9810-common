@@ -1,2 +1,0 @@
-#============= logd ==============
-allow logd vendor_file:file { getattr read };

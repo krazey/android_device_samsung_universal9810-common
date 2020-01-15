@@ -1,2 +1,0 @@
-#============= drmserver ==============
-allow drmserver vendor_file:file { getattr read };

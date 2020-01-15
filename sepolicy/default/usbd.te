@@ -1,3 +1,0 @@
-#============= usbd ==============
-allow usbd vendor_file:file { getattr read };
-allow usbd debugfs_trace_marker:file getattr;

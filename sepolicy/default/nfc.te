@@ -1,7 +1,0 @@
-#============= nfc ==============
-allow nfc system_data_file:dir { add_name write };
-allow nfc system_data_file:file create;
-allow nfc init:binder call;
-allow nfc runtime_event_log_tags_file:file getattr;
-allow nfc system_data_file:file { open write };
-allow nfc init:binder transfer;

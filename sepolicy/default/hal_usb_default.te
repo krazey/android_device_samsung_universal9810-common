@@ -1,2 +1,0 @@
-#============= hal_usb_default ==============
-allow hal_usb_default debugfs_trace_marker:file getattr;

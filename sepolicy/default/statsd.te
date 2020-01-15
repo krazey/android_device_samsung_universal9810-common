@@ -1,3 +1,0 @@
-#============= statsd ==============
-allow statsd vendor_file:file { getattr read };
-allow statsd debugfs_trace_marker:file getattr;

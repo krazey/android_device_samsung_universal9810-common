@@ -1,2 +1,0 @@
-#============= bootstat ==============
-allow bootstat vendor_file:file { getattr read };

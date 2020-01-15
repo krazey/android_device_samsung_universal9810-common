@@ -1,2 +1,0 @@
-#============= wificond ==============
-allow wificond vendor_file:file { getattr read };

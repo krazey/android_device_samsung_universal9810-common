@@ -1,2 +1,0 @@
-#============= mediaextractor ==============
-allow mediaextractor vendor_file:file { getattr read };

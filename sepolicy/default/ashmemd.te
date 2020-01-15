@@ -1,2 +1,0 @@
-#============= ashmemd ==============
-allow ashmemd vendor_file:file { getattr read };

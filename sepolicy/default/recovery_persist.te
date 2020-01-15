@@ -1,3 +1,0 @@
-#============= recovery_persist ==============
-allow recovery_persist vendor_file:file { getattr read };
-allow recovery_persist runtime_event_log_tags_file:file getattr;

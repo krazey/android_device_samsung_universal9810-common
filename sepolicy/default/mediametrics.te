@@ -1,2 +1,0 @@
-#============= mediametrics ==============
-allow mediametrics vendor_file:file { getattr read };

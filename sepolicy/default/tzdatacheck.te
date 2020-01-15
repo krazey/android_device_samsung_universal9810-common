@@ -1,2 +1,0 @@
-#============= tzdatacheck ==============
-allow tzdatacheck vendor_file:file { getattr read };
