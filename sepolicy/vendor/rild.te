@@ -13,4 +13,7 @@ allow rild vendor_data_file:file { create getattr ioctl lock open read unlink wr
 allow rild vendor_default_prop:property_service set;
 allow rild unlabeled:dir search;
 allow rild hal_audio_default:dir search;
+allow rild system_data_file:dir getattr;
+allow rild vendor_data_file:file setattr;
+allow rild hal_audio_default:file { getattr open read };
 

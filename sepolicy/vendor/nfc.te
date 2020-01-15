@@ -4,3 +4,6 @@ allow nfc system_data_file:file open;
 allow nfc init:binder transfer;
 allow nfc system_data_file:dir { add_name write };
 allow nfc system_data_file:file { create write };
+allow nfc gpuservice:binder call;
+allow nfc mali_device:chr_file { open read write getattr ioctl };
+allow nfc vendor_file:file { execute getattr open read };

@@ -37,4 +37,9 @@ allow init vendor_file:file { execute execute_no_trans };
 allow init vendor_shell_exec:file execute_no_trans;
 allow init vndbinder_device:chr_file { ioctl open read write };
 allow init nfc:binder call;
-
+allow init cameraserver:binder call;
+allow init fwk_sensor_hwservice:hwservice_manager find;
+allow init hal_graphics_mapper_hwservice:hwservice_manager find;
+allow init ion_device:chr_file { ioctl open read };
+allow init platform_app:fd use;
+allow init video_device:chr_file { ioctl open read write };

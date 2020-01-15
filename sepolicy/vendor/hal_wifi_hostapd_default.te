@@ -1,0 +1,2 @@
+#============= hal_wifi_hostapd_default ==============
+allow hal_wifi_hostapd_default default_android_hwservice:hwservice_manager add;
