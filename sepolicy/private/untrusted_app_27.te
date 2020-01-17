@@ -1,0 +1,2 @@
+allow untrusted_app_27 vendor_file:file { getattr read open execute };
+allow untrusted_app_27 mali_device:chr_file { read write open getattr ioctl };
