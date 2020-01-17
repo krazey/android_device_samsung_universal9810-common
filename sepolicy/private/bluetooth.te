@@ -1,4 +1,4 @@
 #============= bluetooth ==============
 allow bluetooth gpuservice:binder call;
-allow bluetooth mali_device:chr_file { getattr open read write };
+allow bluetooth mali_device:chr_file { getattr open read write ioctl };
 allow bluetooth vendor_file:file { execute getattr open read };
