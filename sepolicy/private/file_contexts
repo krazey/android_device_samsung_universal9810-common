@@ -1,1 +1,3 @@
 /dev/mali0	u:object_r:mali_device:s0
+
+/system/bin/lpm	u:object_r:lpm_exec:s0
