@@ -1,2 +1,5 @@
 allow untrusted_app vendor_file:file { getattr read open execute };
 allow untrusted_app mali_device:chr_file { read write open getattr ioctl };
+allow untrusted_app selinuxfs:dir read;
+allow untrusted_app selinuxfs:file read;
+allow untrusted_app sysfs:dir read;

@@ -1,2 +1,8 @@
 allow untrusted_app_27 vendor_file:file { getattr read open execute };
 allow untrusted_app_27 mali_device:chr_file { read write open getattr ioctl };
+allow untrusted_app_27 block_device:dir search;
+allow untrusted_app_27 fs_bpf:dir write;
+allow untrusted_app_27 proc:file read;
+allow untrusted_app_27 proc_qtaguid_stat:file read;
+allow untrusted_app_27 selinuxfs:file read;
+allow untrusted_app_27 system_file:file write;

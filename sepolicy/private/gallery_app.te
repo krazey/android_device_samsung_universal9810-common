@@ -1,1 +1,2 @@
 allow gallery_app mali_device:chr_file { getattr ioctl open read write };
+allow gallery_app gpuservice:binder call;

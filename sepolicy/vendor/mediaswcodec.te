@@ -1,2 +1,2 @@
 #============= mediaswcodec ==============
-allow mediaswcodec vendor_file:file { getattr read };
+allow mediaswcodec vendor_file:file { getattr read open execute };

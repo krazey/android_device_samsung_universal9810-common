@@ -5,3 +5,4 @@ allow kernel efs_file:file { open read write };
 allow kernel self:capability mknod;
 allow kernel sysfs:file { open read };
 allow kernel efs_file:dir search;
+allow kernel vendor_file:file open;
