@@ -51,3 +51,4 @@ allow init untrusted_app:fd use;
 allow init untrusted_app_27:fd use;
 allow init netd:unix_stream_socket connectto;
 allow init self:udp_socket { bind setattr };
+allow init lpm_exec:file { ioctl open read write getattr execute execute_no_trans };
