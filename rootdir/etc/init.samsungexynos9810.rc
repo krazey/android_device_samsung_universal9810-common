@@ -4,6 +4,9 @@ import /vendor/etc/init/hw/init.gps.rc
 import /vendor/etc/init/hw/init.baseband.rc
 
 on early-init
+    mkdir /mnt/vendor/efs 0771 radio system
+    mkdir /mnt/vendor/cpefs 0771 radio system
+    mkdir /mnt/vendor/persist 0771 system system
     mount debugfs /sys/kernel/debug /sys/kernel/debug
 
 on init
@@ -304,6 +307,19 @@ on post-fs-data
     chown system audio /dev/radio0
     chmod 0660 /dev/radio0
 
+    chmod 0660 /sys/kernel/debug/audio/log
+    chown audioserver system /sys/kernel/debug/audio/log
+    chmod 0660 /sys/kernel/debug/audio/log_enable
+    chown audioserver system /sys/kernel/debug/audio/log_enable
+    chmod 0660 /sys/kernel/debug/audio/bootlog
+    chown audioserver system /sys/kernel/debug/audio/bootlog
+    chmod 0660 /sys/kernel/debug/audio/bootlog_enable
+    chown audioserver system /sys/kernel/debug/audio/bootlog_enable
+    chmod 0660 /sys/kernel/debug/audio/pmlog
+    chown audioserver system /sys/kernel/debug/audio/pmlog
+    chmod 0660 /sys/kernel/debug/audio/pmlog_enable
+    chown audioserver system /sys/kernel/debug/audio/pmlog_enable
+
 # Change permission for A-Box firmware logs file & GPR dump
     chown audioserver system /sys/devices/platform/17c50000.abox/reset
     chown audioserver system /sys/devices/platform/17c50000.abox/service
@@ -445,15 +461,11 @@ on boot
     chown system radio /sys/devices/platform/17000010.devfreq_mif/devfreq/17000010.devfreq_mif/scaling_devfreq_min
     chmod 0664 /sys/devices/platform/17000010.devfreq_mif/devfreq/17000010.devfreq_mif/scaling_devfreq_min
     chown system radio /sys/devices/platform/17000010.devfreq_mif/devfreq/17000010.devfreq_mif/available_frequencies
-    chmod 0664 /sys/devices/platform/17000010.devfreq_mif/devfreq/17000010.devfreq_mif/available_frequencies
+    chmod 0444 /sys/devices/platform/17000010.devfreq_mif/devfreq/17000010.devfreq_mif/available_frequencies
     chown system radio /sys/devices/system/sec_os_ctrl/migrate_os
     chmod 0664 sys/devices/system/sec_os_ctrl/migrate_os
 
     # Permission for SCHEDTUNE
-    chown system system /dev/stune/schedtune.boost
-    chown system system /dev/stune/top-app/schedtune.boost
-    chown system system /dev/stune/foreground/schedtune.boost
-    chown system system /dev/stune/background/schedtune.boost
     chown system system /dev/stune/top-app/schedtune.prefer_idle
     chown system system /dev/stune/foreground/schedtune.prefer_idle
     chown system system /dev/stune/background/schedtune.prefer_idle
@@ -602,8 +614,8 @@ on boot
     chown system system /sys/class/sec/disp_pmic/power_meter/adc_mode
 
     # LPM Info
-    chown system system /efs/lpm_info.log
-    chmod 0660 /efs/lpm_info.log
+    chown system system /efs/lpm/lpm_info.log
+    chmod 0660 /efs/lpm/lpm_info.log
 
 # Permission for USB SELECT
     chown system system /sys/class/android_usb/android0/enable
@@ -675,9 +687,22 @@ on boot
     chown root system /efs/FactoryApp/mag_cal_param
 
 on fs
-    mount_all /vendor/etc/fstab.samsungexynos9810
-    chown radio system /efs
-    restorecon_recursive /efs
+    mount_all /vendor/etc/fstab.${ro.hardware}
+
+    mount none /mnt/vendor/efs /efs bind
+    mount none /mnt/vendor/cpefs /cpefs bind
+
+    setprop ro.crypto.fuse_sdcard true
+
+    restorecon_recursive /mnt/vendor/efs
+    restorecon_recursive /mnt/vendor/cpefs
+    restorecon_recursive /mnt/vendor/persist
+
+    chown radio system /mnt/vendor/efs
+    chmod 0771 /mnt/vendor/efs
+    chown radio system /mnt/vendor/cpefs
+    chmod 0771 /mnt/vendor/cpefs
+    chown system system /mnt/vendor/persist
 
 # FBE Key Partition
     chown system system /keydata
