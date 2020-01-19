@@ -69,10 +69,6 @@ PRODUCT_PACKAGES += \
     init.baseband.rc \
     ueventd.samsungexynos9810.rc
 
-# APEX
-PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/audio/ld.config.txt:$(TARGET_COPY_OUT_SYSTEM)/etc/swcodec/ld.config.txt
-
 # SP-NDK
 PRODUCT_PACKAGES += \
     libvulkan
