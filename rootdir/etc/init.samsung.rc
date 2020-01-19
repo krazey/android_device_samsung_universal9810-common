@@ -278,9 +278,6 @@ on property:vold.decrypt=trigger_restart_framework
     # mobicore
     mkdir /data/misc/mcRegistry 0775 system system
 
-on property:apexd.status=ready
-    mount none /system/etc/swcodec/ld.config.txt /apex/com.android.media.swcodec/etc/ld.config.txt bind
-
 # LPM
 service lpm /system/bin/lpm
     class sec-charger
