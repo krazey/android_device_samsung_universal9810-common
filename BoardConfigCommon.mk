@@ -59,6 +59,9 @@ TARGET_FS_CONFIG_GEN := $(COMMON_PATH)/config.fs
 BOARD_ROOT_EXTRA_FOLDERS := efs cache
 BOARD_ROOT_EXTRA_SYMLINKS += /dev/block/platform/11120000.ufs/by-name/PERSISTENT:/dev/block/persistent
 
+# APEX
+DEXPREOPT_GENERATE_APEX_IMAGE := true
+
 # SELinux
 BOARD_PLAT_PUBLIC_SEPOLICY_DIR += $(COMMON_PATH)/sepolicy/public
 BOARD_PLAT_PRIVATE_SEPOLICY_DIR += $(COMMON_PATH)/sepolicy/private

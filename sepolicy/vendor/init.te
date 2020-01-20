@@ -59,3 +59,8 @@ allow init mnt_vendor_file:file append;
 allow init sysfs_power:file read;
 allow init graphics_device:chr_file open;
 allow init graphics_device:chr_file ioctl;
+allow init hal_codec2_hwservice:hwservice_manager add;
+allow init mediaserver:binder transfer;
+allow init nfc:binder transfer;
+allow init nfc:fd use;
+allow init system_server:fd use;

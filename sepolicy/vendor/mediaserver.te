@@ -1,2 +1,3 @@
 #============= mediaserver ==============
 allow mediaserver vendor_file:file { getattr read open execute };
+allow mediaserver init:binder call;

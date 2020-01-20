@@ -7,3 +7,4 @@ allow hal_bluetooth_default system_prop:property_service set;
 allow hal_bluetooth_default vendor_data_file:file read;
 allow hal_bluetooth_default vendor_default_prop:property_service set;
 allow hal_bluetooth_default vendor_data_file:file { getattr open };
+allow hal_bluetooth_default system_file:file { execute getattr open read };

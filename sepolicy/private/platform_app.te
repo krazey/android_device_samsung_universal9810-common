@@ -6,3 +6,4 @@ allow platform_app mali_device:chr_file { getattr ioctl open read write };
 allow priv_app mali_device:chr_file write;
 allow system_app mali_device:chr_file { getattr ioctl open read write };
 allow platform_app bluetooth_data_file:dir getattr;
+allow platform_app init:binder { call transfer };
