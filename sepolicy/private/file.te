@@ -1,1 +1,3 @@
 type mali_device, dev_type, file_type, fs_type, mlstrustedobject;
+type sec_efs_file, file_type;
+type dqmdbg_file, file_type;
