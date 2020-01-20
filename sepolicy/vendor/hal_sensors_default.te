@@ -5,3 +5,4 @@ allow hal_sensors_default iio_device:chr_file { open read };
 allow hal_sensors_default sysfs:dir { open read };
 allow hal_sensors_default sysfs:file { getattr open read write };
 allow hal_sensors_default efs_file:dir search;
+allow hal_sensors_default mnt_vendor_file:file { open read setattr };
