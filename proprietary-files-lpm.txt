@@ -2,6 +2,7 @@
 bin/lpm
 lib64/libmaet.so
 lib64/libsxqk_skia.so
+lib64/libsuspend.so
 media/battery_error.spi
 media/battery_low.spi
 media/battery_temperature_error.spi
