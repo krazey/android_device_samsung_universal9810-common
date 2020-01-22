@@ -1,3 +1,4 @@
 #============= vold ==============
 allow vold efs_file:dir { ioctl open read };
 allow vold vendor_file:file { getattr read };
+allow vold mnt_vendor_file:dir read;

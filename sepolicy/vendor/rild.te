@@ -19,3 +19,4 @@ allow rild hal_audio_default:file { getattr open read };
 allow rild mnt_vendor_file:dir getattr;
 allow rild mnt_vendor_file:file { getattr open read setattr write };
 allow rild system_file:file { execute getattr open read };
+allow rild mnt_vendor_file:dir search;
