@@ -495,6 +495,16 @@
         <fqname>@2.0::ISecureStorage/default</fqname>
     </hal>
     <hal format="hidl">
+        <name>vendor.samsung.hardware.audio</name>
+        <transport>hwbinder</transport>
+        <version>1.0</version>
+        <interface>
+            <name>ISehDevicesFactory</name>
+            <instance>default</instance>
+        </interface>
+        <fqname>@1.0::ISehDevicesFactory/default</fqname>
+    </hal>
+    <hal format="hidl">
         <name>vendor.samsung.hardware.biometrics.fingerprint</name>
         <transport>hwbinder</transport>
         <version>2.1</version>
@@ -507,12 +517,12 @@
     <hal format="hidl">
         <name>vendor.samsung.hardware.bluetooth</name>
         <transport>hwbinder</transport>
-        <version>1.0</version>
+        <version>2.0</version>
         <interface>
-            <name>IBTVendor</name>
+            <name>ISehBluetooth</name>
             <instance>default</instance>
         </interface>
-        <fqname>@1.0::IBTVendor/default</fqname>
+        <fqname>@2.0::ISehBluetooth/default</fqname>
     </hal>
     <hal format="hidl">
         <name>vendor.samsung.hardware.camera.provider</name>
