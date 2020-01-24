@@ -99,8 +99,7 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     android.hardware.bluetooth@1.0-service \
     android.hardware.bluetooth@1.0-impl \
-    audio.a2dp.default
-
+    libbt-vendor
 # Camera
 PRODUCT_PACKAGES += \
     Camera2
